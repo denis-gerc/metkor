@@ -66,7 +66,7 @@ if (location.hash) {
 }
 //=================
 //Menu
-let iconMenu = document.querySelector(".icon-menu");
+let iconMenu = document.querySelector(".menu__icon");
 if (iconMenu != null) {
 	let delay = 500;
 	let menuBody = document.querySelector(".menu__body");
@@ -79,7 +79,7 @@ if (iconMenu != null) {
 	});
 };
 function menu_close() {
-	let iconMenu = document.querySelector(".icon-menu");
+	let iconMenu = document.querySelector(".menu__icon");
 	let menuBody = document.querySelector(".menu__body");
 	iconMenu.classList.remove("_active");
 	menuBody.classList.remove("_active");
