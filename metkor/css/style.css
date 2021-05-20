@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+:root {
+  --primary-bg-color: #222c35;
+  --secondary-bg-color: #1b232a;
+  --mako-bg-color: #3e454b;
+  --accent-color: #f9a34f;
+  --primary-text-color: #999999;
+  --secondary-text-color: #51565a;
+}
+
 @font-face {
   font-family: "Raleway-Black";
   font-display: swap;
@@ -1402,51 +1411,48 @@ body.ie ._ibg img {
   background: url("../img/icons/close.svg") 0 0 no-repeat;
 }
 
-/*
-//Burger
-.icon-menu {
-	display: none;
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span {
-			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-			&:first-child {
-				top: 0px;
-			}
-			&:last-child {
-				top: auto;
-				bottom: 0px;
-			}
-		}
-		&._active {
-			span {
-				transform: scale(0);
-				&:first-child {
-					transform: rotate(-45deg);
-					top: calc(50% - 1px);
-				}
-				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
-				}
-			}
-		}
-	}
+.header {
+  background: var(--secondary-bg-color);
 }
-*/
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 120px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__link {
+  color: white;
+}
+
+.header__contact {
+  position: relative;
+  right: 0;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__icon {
+  display: none;
+}
 
 .page {
   -webkit-box-flex: 1;
@@ -1454,9 +1460,75 @@ body.ie ._ibg img {
           flex: 1 1 auto;
 }
 
-h1 {
-  font-family: "Raleway-ExtraBold", sans-serif;
+.h1-title {
+  font-family: "Raleway-ExtraLight", sans-serif;
+  font-size: 36px;
+  line-height: 140%;
+  color: white;
+}
+
+.h2-title {
+  font-family: "Raleway-ExtraLight", sans-serif;
   font-size: 50px;
+  line-height: 140%;
+  color: white;
+}
+
+.h3-title {
+  font-family: "Raleway-ExtraLight", sans-serif;
+  font-size: 30px;
+  line-height: 100%;
+  color: white;
+}
+
+.h4-title {
+  font-family: "Raleway-ExtraLight", sans-serif;
+  font-size: 20px;
+  line-height: 115%;
+  color: white;
+}
+
+.h5-title {
+  font-family: "Raleway-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 140%;
+  color: white;
+}
+
+.p-text {
+  font-family: "Raleway-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+}
+
+.placeholder {
+  font-family: "Raleway-MediumItalic", sans-serif;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 2px;
+}
+
+.menu-text {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  line-height: 160%;
+}
+
+/**
+ * Сброс стилей у кнопки.
+ * Придётся немного поработать, чтобы получить нейтральный вид.
+*/
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
 }
 
 @media (min-width: 991.98px) {
@@ -1483,5 +1555,69 @@ h1 {
 
   .select__options {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: white;
+  }
+
+  .menu__icon::before,
+  .menu__icon::after {
+    content: "";
+  }
+
+  .menu__icon::before {
+    top: 0;
+  }
+
+  .menu__icon::after {
+    bottom: 0;
+  }
+
+  .menu__icon span {
+    top: 50%;
+    -webkit-transform: scale(1) translate(0px, -50%);
+        -ms-transform: scale(1) translate(0px, -50%);
+            transform: scale(1) translate(0px, -50%);
+  }
+
+  .menu__icon._active span {
+    -webkit-transform: scale(0) translate(0px, -50%);
+        -ms-transform: scale(0) translate(0px, -50%);
+            transform: scale(0) translate(0px, -50%);
+  }
+
+  .menu__icon._active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+        -ms-transform: rotate(-45deg) translate(0px, -50%);
+            transform: rotate(-45deg) translate(0px, -50%);
+  }
+
+  .menu__icon._active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+        -ms-transform: rotate(45deg) translate(0px, 50%);
+            transform: rotate(45deg) translate(0px, 50%);
   }
 }
