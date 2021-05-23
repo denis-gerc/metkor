@@ -7,6 +7,9 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
+$container-padding: 15px;
+$gutter: 30px;
+
 //<Fonts Default Variables>====================================================================
 $fontFamily: "Raleway-Regular", sans-serif;
 
@@ -100,14 +103,14 @@ body {
 @import "ui";
 
 // Elements
-
 //@import "datepicker";
 //@import "lightgallery";
 //@import "pagging";
 @import "popup";
 @import "header";
-@import "home/fullscreen";
 @import "footer";
+
+// Pages
 @import "home";
 
 // Section
@@ -118,6 +121,11 @@ body {
 //<MAIN PAGE BLOCKS>===========================================================================
 .page {
 	flex: 1 1 auto;
+}
+
+[class*="page__"] {
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .h1-title {
@@ -174,6 +182,7 @@ body {
 	font-size: 14px;
 	line-height: 125%;
 	letter-spacing: 2px;
+	font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .menu-text {
@@ -182,6 +191,15 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 1.4px;
 	line-height: 160%;
+	font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.subtitle {
+	font-family: "Raleway-Light", sans-serif;
+	font-size: 20px;
+	line-height: 30 * 100% / 20;
+	font-feature-settings: "pnum" on, "lnum" on;
+	color: $primary-text-color;
 }
 
 //<END MAIN PAGE BLOCKS>=======================================================================
