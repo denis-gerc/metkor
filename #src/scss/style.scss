@@ -13,17 +13,15 @@ $fontFamily: "Raleway-Regular", sans-serif;
 //<End Fonts Default Variables>================================================================
 
 //<Color Scheme Variables>
-
-:root {
-	// Color
-	--primary-bg-color: #222c35;
-	--secondary-bg-color: #1b232a;
-	--mako-bg-color: #3e454b;
-	--bunker-bg-color: #161c22;
-	--accent-color: #f9a34f;
-	--primary-text-color: #999999;
-	--secondary-text-color: #51565a;
-}
+$primary-bg-color: #222c35;
+$secondary-bg-color: #1b232a;
+$mako-bg-color: #3e454b;
+$bunker-bg-color: #161c22;
+$accent-color: #f9a34f;
+$primary-text-color: #999999;
+$secondary-text-color: #51565a;
+$white: #ffffff;
+$black: #000000;
 
 //<END VARIABLES GLOBAL>=======================================================================
 
@@ -51,8 +49,9 @@ $fontFamily: "Raleway-Regular", sans-serif;
 @import "normalize";
 
 body {
-	color: #999999;
+	color: $primary-text-color;
 	font-size: 16px;
+	font-feature-settings: "pnum" on, "lnum" on;
 	&._lock {
 		overflow: hidden;
 	}
@@ -107,6 +106,7 @@ body {
 //@import "pagging";
 @import "popup";
 @import "header";
+@import "home/fullscreen";
 @import "footer";
 @import "home";
 
@@ -124,7 +124,7 @@ body {
 	font-family: "Raleway-ExtraLight", sans-serif;
 	font-size: 36px;
 	line-height: 140%;
-	color: white;
+	color: $white;
 	font-feature-settings: "pnum" on, "lnum" on;
 }
 
@@ -132,7 +132,7 @@ body {
 	font-family: "Raleway-ExtraLight", sans-serif;
 	font-size: 50px;
 	line-height: 140%;
-	color: white;
+	color: $white;
 	font-feature-settings: "pnum" on, "lnum" on;
 }
 
@@ -140,7 +140,7 @@ body {
 	font-family: "Raleway-ExtraLight", sans-serif;
 	font-size: 30px;
 	line-height: 100%;
-	color: white;
+	color: $white;
 	font-feature-settings: "pnum" on, "lnum" on;
 }
 
@@ -148,7 +148,7 @@ body {
 	font-family: "Raleway-ExtraLight", sans-serif;
 	font-size: 20px;
 	line-height: 115%;
-	color: white;
+	color: $white;
 	font-feature-settings: "pnum" on, "lnum" on;
 }
 
@@ -156,7 +156,7 @@ body {
 	font-family: $fontFamily;
 	font-size: 20px;
 	line-height: 140%;
-	color: white;
+	color: $white;
 	font-feature-settings: "pnum" on, "lnum" on;
 }
 
@@ -165,13 +165,8 @@ body {
 	font-size: 16px;
 	line-height: 150%;
 	margin-bottom: 15px;
-	color: var(--primary-text-color);
+	color: $primary-text-color;
 	font-feature-settings: "pnum" on, "lnum" on;
-
-	// font-variant-numeric: lining-nums;
-	// -moz-font-feature-settings: "lnum";
-	// -webkit-font-feature-settings: "lnum";
-	// font-feature-settings: "lnum";
 }
 
 .placeholder {
@@ -191,10 +186,7 @@ body {
 
 //<END MAIN PAGE BLOCKS>=======================================================================
 
-/**
- * Сброс стилей у кнопки.
- * Придётся немного поработать, чтобы получить нейтральный вид.
-*/
+// Reset Button
 button {
 	padding: 0;
 	border: none;
