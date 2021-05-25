@@ -1673,7 +1673,6 @@ body.ie ._ibg img {
   max-width: 470px;
   margin: 0 auto;
   margin-bottom: 55px;
-  color: red;
 }
 
 .advantages__grid {
@@ -1715,6 +1714,31 @@ body.ie ._ibg img {
 
 .advantages__text {
   text-align: center;
+}
+
+.gallery {
+  background-color: #1b232a;
+}
+
+.gallery__h2-title {
+  text-align: center;
+}
+
+.gallery__h2-title span {
+  color: #f9a34f;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 105px;
+}
+
+.gallery__list {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
 }
 
 .page {
