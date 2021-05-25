@@ -14,10 +14,6 @@
   position: relative;
   z-index: 2;
   box-sizing: border-box;
-
-  @media (max-height: 320px) {
-    margin-top: 20px;
-  }
 }
 
 .fullscreen__title {
@@ -39,6 +35,8 @@
 
   @media (max-height: 320px) {
     line-height: 100%;
+    margin-top: 0;
+    font-size: 34px;
   }
 }
 

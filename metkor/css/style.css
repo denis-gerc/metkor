@@ -1673,17 +1673,13 @@ body.ie ._ibg img {
   max-width: 470px;
   margin: 0 auto;
   margin-bottom: 55px;
+  color: red;
 }
 
-.advantages__row:not(:last-child) {
-  padding-bottom: 30px;
-}
-
-.row {
+.advantages__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-gap: 30px;
 }
 
@@ -1702,6 +1698,10 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#warranty {
+  fill: #f9a34f;
 }
 
 .advantages__icon {
@@ -2003,11 +2003,6 @@ button {
         -ms-transform: rotate(45deg) translate(0px, 50%);
             transform: rotate(45deg) translate(0px, 50%);
   }
-
-  .row {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 991.98px) {
@@ -2017,13 +2012,6 @@ button {
 
   .select__options {
     font-size: 18px;
-  }
-}
-
-@media (max-width: 600px) {
-  .row {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
   }
 }
 
@@ -2062,12 +2050,10 @@ button {
 }
 
 @media (max-height: 320px) {
-  .fullscreen__body {
-    margin-top: 20px;
-  }
-
   .fullscreen__title {
     line-height: 100%;
+    margin-top: 0;
+    font-size: 34px;
   }
 }
 
