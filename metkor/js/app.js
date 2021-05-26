@@ -4,7 +4,27 @@ function email_test(input) {
 
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
-var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+var isMobile = {
+	Android: function () {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function () {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function () {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function () {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function () {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function () {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
+
 function isIE() {
 	ua = navigator.userAgent;
 	var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
@@ -78,6 +98,7 @@ if (iconMenu != null) {
 		}
 	});
 };
+
 function menu_close() {
 	let iconMenu = document.querySelector(".menu__icon");
 	let menuBody = document.querySelector(".menu__body");
@@ -94,6 +115,7 @@ function body_lock(delay) {
 		body_lock_add(delay);
 	}
 }
+
 function body_lock_remove(delay) {
 	let body = document.querySelector("body");
 	if (unlock) {
@@ -113,6 +135,7 @@ function body_lock_remove(delay) {
 		}, delay);
 	}
 }
+
 function body_lock_add(delay) {
 	let body = document.querySelector("body");
 	if (unlock) {
@@ -197,7 +220,7 @@ if (spollers.length > 0) {
 					}
 				}
 			}
-			console.log(spoller.nextElementSibling);
+			// console.log(spoller.nextElementSibling);
 			spoller.classList.toggle('_active');
 			_slideToggle(spoller.nextElementSibling);
 
@@ -206,6 +229,7 @@ if (spollers.length > 0) {
 			}, 500);
 		}
 	}
+
 	function spollersInit() {
 		for (let index = 0; index < spollers.length; index++) {
 			const spoller = spollers[index];
@@ -224,6 +248,7 @@ if (spollers.length > 0) {
 			}
 		}
 	}
+
 	function spollersShowActive() {
 		for (let index = 0; index < spollers.length; index++) {
 			const spoller = spollers[index];
@@ -245,6 +270,7 @@ let gallery = document.querySelectorAll('._gallery');
 if (gallery) {
 	gallery_init();
 }
+
 function gallery_init() {
 	for (let index = 0; index < gallery.length; index++) {
 		const el = gallery[index];
@@ -292,6 +318,7 @@ function digi_animate(digi_animate) {
 		}
 	}
 }
+
 function digi_animate_value(el, start, end, duration) {
 	var obj = el;
 	var range = end - start;
@@ -346,6 +373,7 @@ for (let index = 0; index < popups.length; index++) {
 		}
 	});
 }
+
 function popup_open(item, video = '') {
 	let activePopup = document.querySelectorAll('.popup._active');
 	if (activePopup.length > 0) {
@@ -364,6 +392,7 @@ function popup_open(item, video = '') {
 		history.pushState('', '', '#' + item);
 	}
 }
+
 function popup_close(item, bodyUnlock = true) {
 	if (unlock) {
 		if (!item) {
@@ -512,6 +541,7 @@ if (moreBlocks.length > 0) {
 			});
 
 			let isScrollStart;
+
 			function setSize(type) {
 				let resultHeight;
 				let itemsContentHeight = 0;
@@ -656,7 +686,11 @@ function initRatings() {
 }
 //========================================
 //Animate
-function animate({ timing, draw, duration }) {
+function animate({
+	timing,
+	draw,
+	duration
+}) {
 	let start = performance.now();
 	requestAnimationFrame(function animate(time) {
 		// timeFraction изменяется от 0 до 1
@@ -674,11 +708,13 @@ function animate({ timing, draw, duration }) {
 
 	});
 }
+
 function makeEaseOut(timing) {
 	return function (timeFraction) {
 		return 1 - timing(1 - timeFraction);
 	}
 }
+
 function makeEaseInOut(timing) {
 	return function (timeFraction) {
 		if (timeFraction < .5)
@@ -687,9 +723,11 @@ function makeEaseInOut(timing) {
 			return (2 - timing(2 * (1 - timeFraction))) / 2;
 	}
 }
+
 function quad(timeFraction) {
 	return Math.pow(timeFraction, 2)
 }
+
 function circ(timeFraction) {
 	return 1 - Math.sin(Math.acos(timeFraction));
 }

@@ -1,0 +1,135 @@
+.metkor {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.metkor__about-us {
+	padding: 80px;
+}
+.about-us {
+	background-color: $secondary-bg-color;
+}
+
+.about-us__h2-title {
+	margin-bottom: 15px;
+}
+
+.about-us__subtitle {
+	margin-bottom: 45px;
+}
+
+.metkor__faq {
+	padding: 80px;
+}
+
+.faq {
+	background-color: $primary-bg-color;
+}
+
+.faq__h2-title {
+	margin-bottom: 15px;
+}
+
+.faq__subtitle {
+	margin-bottom: 45px;
+}
+
+// Tabs ========================================
+.tabs-block {
+	margin: 0px 0px 50px 0px;
+
+	// .tabs-block__nav
+	&__nav {
+		display: flex;
+		margin: 0px -2px;
+	}
+
+	// .tabs-block__item
+	&__item {
+		flex: 0 1 33.333%;
+		margin: 0px 2px;
+		border: 2px solid $primary-bg-color;
+		border-bottom: transparent;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-weight: 700;
+		&._active {
+			background-color: $accent-color;
+			border: 2px solid $accent-color;
+			color: $white;
+		}
+	}
+
+	// .tabs-block__body
+	&__body {
+		padding: 40px;
+		background-color: $primary-bg-color;
+		border-top: 2px solid $accent-color;
+	}
+
+	// .tabs-block__block
+	&__block {
+	}
+}
+//========================================================================================================================================================
+
+.spollers-block {
+	// .spollers-block__item
+	&__item {
+		margin: 0px 0px 15px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// .spollers-block__title
+	&__title {
+		background-color: $secondary-bg-color;
+		cursor: pointer;
+		padding: 20px 70px 20px 20px;
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 20px;
+			background-color: #fff;
+			height: 2px;
+			transition: transform 0.3s ease 0s;
+			transform: translate(0, -50%) rotate(-45deg);
+			position: absolute;
+			right: 15px;
+			top: 50%;
+		}
+
+		&::after {
+			content: "";
+			width: 20px;
+			background-color: #fff;
+			height: 2px;
+			transition: transform 0.3s ease 0s;
+			transform: translate(0, -50%) rotate(45deg);
+			position: absolute;
+			right: 29px;
+			top: 50%;
+		}
+
+		&._active {
+			&::before {
+				transform: translate(0, -50%) rotate(45deg);
+			}
+			&::after {
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+		}
+	}
+
+	&__body {
+		padding: 20px;
+		border: 2px solid $secondary-bg-color;
+		border-top: transparent;
+	}
+}
