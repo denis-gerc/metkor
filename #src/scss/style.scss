@@ -52,23 +52,23 @@ $black: #000000;
 @import "normalize";
 
 body {
-	color: $primary-text-color;
-	font-size: 16px;
-	font-feature-settings: "pnum" on, "lnum" on;
-	&._lock {
-		overflow: hidden;
-	}
+  color: $primary-text-color;
+  font-size: 16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 .visually-hidden {
-	position: absolute;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0;
-	border: 0;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 //<END RESET>==================================================================================
 
@@ -76,20 +76,20 @@ body {
 
 // Wrapper
 .wrapper {
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	&._loaded {
-	}
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  &._loaded {
+  }
 }
 
 // Grid system
 ._container {
-	max-width: $maxWidthContainer + px;
-	margin: 0 auto;
-	padding: 0 15px;
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 //<END MAIN PAGE BLOCKS>=======================================================================
@@ -120,104 +120,107 @@ body {
 
 //<MAIN PAGE BLOCKS>===========================================================================
 .page {
-	flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 [class*="page__"] {
-	padding-top: 100px;
-	padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .h1-title {
-	font-family: "Raleway-ExtraLight", sans-serif;
-	font-size: 36px;
-	line-height: 140%;
-	color: $white;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: "Raleway-ExtraLight", sans-serif;
+  font-size: 36px;
+  line-height: 140%;
+  color: $white;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .h2-title {
-	font-family: "Raleway-ExtraLight", sans-serif;
-	// font-size: 50px;
-	// line-height: 70px;
-	// line-height: 140%;
-	color: $white;
-	margin-bottom: 15px;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: "Raleway-ExtraLight", sans-serif;
+  color: $white;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
 
-	@include adaptiv-font(50, 37, 1);
-	@include adaptiv-value("line-height", 70, 40, 0);
+  @include adaptiv-font(50, 37, 1);
+  @include adaptiv-value("line-height", 70, 40, 0);
 
-	@media (min-width: 1920px) {
-		@include adaptiv-value("line-height", 70, 40, 1);
-	}
+  @media (min-width: 1920px) {
+    @include adaptiv-value("line-height", 70, 40, 1);
+  }
+
+  span {
+    color: $accent-color;
+  }
 }
 
 .h3-title {
-	font-family: "Raleway-ExtraLight", sans-serif;
-	font-size: 30px;
-	line-height: 100%;
-	color: $white;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: "Raleway-ExtraLight", sans-serif;
+  font-size: 30px;
+  line-height: 100%;
+  color: $white;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .h4-title {
-	font-family: "Raleway-ExtraLight", sans-serif;
-	font-size: 20px;
-	line-height: 115%;
-	color: $white;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: "Raleway-ExtraLight", sans-serif;
+  font-size: 20px;
+  line-height: 115%;
+  color: $white;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .h5-title {
-	font-family: $fontFamily;
-	font-size: 20px;
-	line-height: 140%;
-	color: $white;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: $fontFamily;
+  font-size: 20px;
+  line-height: 140%;
+  color: $white;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .p-text {
-	font-family: $fontFamily;
-	font-size: 16px;
-	line-height: 150%;
-	margin-bottom: 15px;
-	color: $primary-text-color;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: $fontFamily;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 15px;
+  color: $primary-text-color;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .placeholder {
-	font-family: "Raleway-MediumItalic", sans-serif;
-	font-size: 14px;
-	line-height: 125%;
-	letter-spacing: 2px;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: "Raleway-MediumItalic", sans-serif;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 2px;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .menu-text {
-	font-family: "Raleway-Bold", sans-serif;
-	font-size: 14px;
-	text-transform: uppercase;
-	letter-spacing: 1.4px;
-	line-height: 160%;
-	font-feature-settings: "pnum" on, "lnum" on;
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  line-height: 160%;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .subtitle {
-	font-family: "Raleway-Light", sans-serif;
-	font-size: 20px;
-	line-height: 30 * 100% / 20;
-	font-feature-settings: "pnum" on, "lnum" on;
-	color: $primary-text-color;
+  font-family: "Raleway-Light", sans-serif;
+  font-size: 20px;
+  line-height: 30 * 100% / 20;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: $primary-text-color;
+  text-align: center;
+  margin: 0 auto;
 }
 
 //<END MAIN PAGE BLOCKS>=======================================================================
 
 // Reset Button
 button {
-	padding: 0;
-	border: none;
-	font: inherit;
-	color: inherit;
-	background-color: transparent;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
 }
