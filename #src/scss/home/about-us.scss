@@ -36,8 +36,6 @@
 
 // Tabs ========================================
 .tabs-block {
-	margin: 0px 0px 50px 0px;
-
 	// .tabs-block__nav
 	&__nav {
 		display: flex;
@@ -80,7 +78,7 @@
 .spollers-block {
 	// .spollers-block__item
 	&__item {
-		margin: 0px 0px 15px 0px;
+		margin: 0px 0px 18px 0px;
 		&:last-child {
 			margin: 0px 0px 0px 0px;
 		}
@@ -96,10 +94,10 @@
 		&::before {
 			content: "";
 			width: 20px;
-			background-color: #fff;
+			background-color: $accent-color;
 			height: 2px;
 			transition: transform 0.3s ease 0s;
-			transform: translate(0, -50%) rotate(-45deg);
+			transform: translate(0, -50%);
 			position: absolute;
 			right: 15px;
 			top: 50%;
@@ -108,21 +106,23 @@
 		&::after {
 			content: "";
 			width: 20px;
-			background-color: #fff;
+			background-color: $accent-color;
 			height: 2px;
 			transition: transform 0.3s ease 0s;
-			transform: translate(0, -50%) rotate(45deg);
+			transform: translate(0, -50%) rotate(90deg);
 			position: absolute;
-			right: 29px;
+			right: 15px;
 			top: 50%;
 		}
 
 		&._active {
+			display: block;
+
 			&::before {
-				transform: translate(0, -50%) rotate(45deg);
+				transform: translate(0, -50%) rotate(0deg);
 			}
 			&::after {
-				transform: translate(0, -50%) rotate(-45deg);
+				transform: translate(0, -50%) rotate(0deg);
 			}
 		}
 	}
@@ -131,5 +131,6 @@
 		padding: 20px;
 		border: 2px solid $secondary-bg-color;
 		border-top: transparent;
+		display: none;
 	}
 }
