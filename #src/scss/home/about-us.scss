@@ -1,10 +1,24 @@
 .metkor {
+}
+
+.metkor__grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+
+	@media (max-width: 1025px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .metkor__about-us {
 	padding: 80px;
+	@include adaptiv-value("padding-left", 80, 15, 0);
+	@include adaptiv-value("padding-right", 80, 15, 0);
+
+	@media (min-width: 1920px) {
+		@include adaptiv-value("padding-left", 80, 15, 1);
+		@include adaptiv-value("padding-right", 80, 15, 1);
+	}
 }
 .about-us {
 	background-color: $secondary-bg-color;
@@ -15,11 +29,23 @@
 }
 
 .about-us__subtitle {
-	margin-bottom: 45px;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 55px;
+}
+
+.about-us__subtitle {
 }
 
 .metkor__faq {
 	padding: 80px;
+	@include adaptiv-value("padding-left", 80, 15, 0);
+	@include adaptiv-value("padding-right", 80, 15, 0);
+
+	@media (min-width: 1920px) {
+		@include adaptiv-value("padding-left", 80, 15, 1);
+		@include adaptiv-value("padding-right", 80, 15, 1);
+	}
 }
 
 .faq {
@@ -31,7 +57,9 @@
 }
 
 .faq__subtitle {
-	margin-bottom: 45px;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 55px;
 }
 
 // Tabs ========================================
@@ -40,6 +68,10 @@
 	&__nav {
 		display: flex;
 		margin: 0px -2px;
+
+		@media (max-width: 376px) {
+			display: block;
+		}
 	}
 
 	// .tabs-block__item
@@ -64,21 +96,26 @@
 
 	// .tabs-block__body
 	&__body {
-		padding: 40px;
 		background-color: $primary-bg-color;
 		border-top: 2px solid $accent-color;
+
+		@include adaptiv-value("padding", 40, 20, 0);
+
+		@media (min-width: 1920px) {
+			@include adaptiv-value("padding", 40, 20, 1);
+		}
 	}
 
 	// .tabs-block__block
 	&__block {
 	}
 }
-//========================================================================================================================================================
 
+// Spollers =========================================================
 .spollers-block {
 	// .spollers-block__item
 	&__item {
-		margin: 0px 0px 18px 0px;
+		margin-bottom: 13px;
 		&:last-child {
 			margin: 0px 0px 0px 0px;
 		}
@@ -88,8 +125,9 @@
 	&__title {
 		background-color: $secondary-bg-color;
 		cursor: pointer;
-		padding: 20px 70px 20px 20px;
+		padding: 19px 70px 19px 20px;
 		position: relative;
+		line-height: 140%;
 
 		&::before {
 			content: "";

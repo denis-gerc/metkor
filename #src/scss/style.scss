@@ -137,7 +137,7 @@ body {
 	text-align: center;
 	font-feature-settings: "pnum" on, "lnum" on;
 
-	@include adaptiv-font(50, 37, 1);
+	@include adaptiv-font(50, 36, 1);
 	@include adaptiv-value("line-height", 70, 40, 0);
 
 	@media (min-width: 1920px) {
@@ -180,6 +180,7 @@ body {
 	margin-bottom: 15px;
 	color: $primary-text-color;
 	font-feature-settings: "pnum" on, "lnum" on;
+
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -221,6 +222,10 @@ body {
 
 	span {
 		color: $accent-color;
+
+		@media (max-width: 426px) {
+			display: block;
+		}
 	}
 }
 

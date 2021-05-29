@@ -2838,7 +2838,7 @@ p.gallery__subtitle {
   transition: 0.3s ease-out opacity;
 }
 
-.metkor {
+.metkor__grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -2847,6 +2847,8 @@ p.gallery__subtitle {
 
 .metkor__about-us {
   padding: 80px;
+  padding-left: calc(15px + 65 * ((100vw - 320px) / 1600));
+  padding-right: calc(15px + 65 * ((100vw - 320px) / 1600));
 }
 
 .about-us {
@@ -2858,11 +2860,15 @@ p.gallery__subtitle {
 }
 
 .about-us__subtitle {
-  margin-bottom: 45px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 55px;
 }
 
 .metkor__faq {
   padding: 80px;
+  padding-left: calc(15px + 65 * ((100vw - 320px) / 1600));
+  padding-right: calc(15px + 65 * ((100vw - 320px) / 1600));
 }
 
 .faq {
@@ -2874,7 +2880,9 @@ p.gallery__subtitle {
 }
 
 .faq__subtitle {
-  margin-bottom: 45px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 55px;
 }
 
 .tabs-block__nav {
@@ -2913,13 +2921,13 @@ p.gallery__subtitle {
 }
 
 .tabs-block__body {
-  padding: 40px;
   background-color: #222c35;
   border-top: 2px solid #f9a34f;
+  padding: calc(20px + 20 * ((100vw - 320px) / 1600));
 }
 
 .spollers-block__item {
-  margin: 0px 0px 18px 0px;
+  margin-bottom: 13px;
 }
 
 .spollers-block__item:last-child {
@@ -2929,8 +2937,9 @@ p.gallery__subtitle {
 .spollers-block__title {
   background-color: #1b232a;
   cursor: pointer;
-  padding: 20px 70px 20px 20px;
+  padding: 19px 70px 19px 20px;
   position: relative;
+  line-height: 140%;
 }
 
 .spollers-block__title::before {
@@ -3201,6 +3210,20 @@ button {
     height: 60px;
   }
 
+  .metkor__about-us {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .metkor__faq {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .tabs-block__body {
+    padding: 40px;
+  }
+
   .h2-title {
     line-height: 70px;
   }
@@ -3224,7 +3247,7 @@ button {
   }
 
   .h2-title {
-    font-size: calc(37px + 13 * ((100vw - 320px) / 880));
+    font-size: calc(36px + 14 * ((100vw - 320px) / 880));
   }
 }
 
@@ -3337,6 +3360,11 @@ button {
         -ms-transform: rotate(45deg) translate(0px, 50%);
             transform: rotate(45deg) translate(0px, 50%);
   }
+
+  .metkor__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -3355,6 +3383,18 @@ button {
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 426px) {
+  .tab-text span {
+    display: block;
+  }
+}
+
+@media (max-width: 376px) {
+  .tabs-block__nav {
+    display: block;
   }
 }
 
@@ -3392,6 +3432,26 @@ button {
 
   .fullscreen__link {
     height: calc(50px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .metkor__about-us {
+    padding-left: calc(15px + 65 * ((100vw - 320px) / 880));
+  }
+
+  .metkor__about-us {
+    padding-right: calc(15px + 65 * ((100vw - 320px) / 880));
+  }
+
+  .metkor__faq {
+    padding-left: calc(15px + 65 * ((100vw - 320px) / 880));
+  }
+
+  .metkor__faq {
+    padding-right: calc(15px + 65 * ((100vw - 320px) / 880));
+  }
+
+  .tabs-block__body {
+    padding: calc(20px + 20 * ((100vw - 320px) / 880));
   }
 
   .h2-title {
