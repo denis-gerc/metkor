@@ -3006,6 +3006,63 @@ p.gallery__subtitle {
   opacity: 1;
 }
 
+.progress {
+  background-color: #222c35;
+}
+
+.page__progress {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.progress__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+      grid-template: 1fr/repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 30px;
+}
+
+.progress__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 5px solid #f9a34f;
+  position: relative;
+}
+
+.progress__item .p-text {
+  padding: 20px;
+}
+
+.progress__title {
+  font-family: "Raleway-Light", sans-serif;
+  font-size: 64px;
+  line-height: 121.875%;
+  color: #ffffff;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.progress__description {
+  text-align: center;
+}
+
 .header {
   position: relative;
   top: 0;
@@ -3518,6 +3575,20 @@ button {
   }
 }
 
+@media (max-width: 1024px) {
+  .progress__container {
+    -ms-grid-rows: 1fr 30px 1fr;
+    -ms-grid-columns: 1fr 30px 1fr;
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+
+  .progress__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 49, 99%;
+            flex: 1 0 49, 99%;
+  }
+}
+
 @media (max-width: 991.98px) {
   .select__title {
     font-size: 18px;
@@ -3534,6 +3605,14 @@ button {
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 570px) {
+  .progress__container {
+    -ms-grid-rows: 1fr 30px 1fr 30px 1fr 30px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: repeat(4, 1fr)/1fr;
   }
 }
 
