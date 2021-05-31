@@ -9,8 +9,8 @@
 
 	<div class="mailform__container _container">
 
-		<form action="/contacts/#wpcf7-f5-p6-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-
+		<form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+			<!-- текстовое поле -->
 			<label>
 				<span class="wpcf7-form-control-wrap your-name">
 					<input type="text" name="your-name" value="" size="40"
@@ -18,7 +18,7 @@
 						placeholder="Ваше имя">
 				</span>
 			</label>
-
+			<!-- email -->
 			<label>
 				<span class="wpcf7-form-control-wrap your-email">
 					<input type="email" name="your-email" value="" size="40"
@@ -26,15 +26,16 @@
 						aria-required="true" aria-invalid="false" placeholder="E-mail">
 				</span>
 			</label>
-
+			<!-- телефон -->
 			<label>
 				<span class="wpcf7-form-control-wrap your-tel">
 					<input type="tel" name="your-tel" value="" size="40"
 						class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel" aria-invalid="false"
-						placeholder="+7 495-445-3039" placeholder="Телефон">
+						placeholder="+7 495 445 3039" placeholder="Телефон">
 				</span>
 			</label>
 
+			<!-- текстовое поле -->
 			<label>
 				<span class="wpcf7-form-control-wrap your-message">
 					<textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"
@@ -43,13 +44,17 @@
 			</label>
 
 			<!-- отправить форму -->
-			<input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit">
+			<label>
+				<input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit">
+			</label>
 			<span class="ajax-loader"></span>
 
 			<!-- добавить файл -->
-			<span class="wpcf7-form-control-wrap your-file">
-				<input type="file" name="your-file" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false">
-			</span>
+			<label>
+				<span class="wpcf7-form-control-wrap your-file">
+					<input type="file" name="your-file" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false">
+				</span>
+			</label>
 
 			<!-- политика конфиденциальности -->
 			<div class="privacy-policy">
