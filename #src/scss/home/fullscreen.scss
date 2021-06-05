@@ -1,119 +1,76 @@
 .fullscreen {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .fullscreen__container {
-  display: flex;
-  width: 100%;
-  height: calc(100vh - 100px);
-  align-items: center;
+	display: flex;
+	width: 100%;
+	height: calc(100vh - 100px);
+	align-items: center;
 }
 
 .fullscreen__body {
-  position: relative;
-  z-index: 2;
-  box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	box-sizing: border-box;
 }
 
 .fullscreen__title {
-  font-family: "Raleway-ExtraBold", sans-serif;
-  line-height: 110%;
-  color: $white;
-  margin: 0;
-  @include adaptiv-font(60, 36, 1);
-  @include adaptiv-value("margin-bottom", 32, 8, 0);
+	font-family: "Raleway-ExtraBold", sans-serif;
+	line-height: 110%;
+	color: $white;
+	margin: 0;
+	@include adaptiv-font(60, 36, 1);
 
-  // width: > 1920px
-  @media (min-width: 1920px) {
-    @include adaptiv-value("margin-bottom", 32, 8, 1);
-  }
+	// width: < 1920px
+	@include adaptiv-value("margin-bottom", 32, 8, 0);
+	// width: > 1920px
+	@media (min-width: 1920px) {
+		@include adaptiv-value("margin-bottom", 32, 8, 1);
+	}
 
-  span {
-    color: $accent-color;
-  }
+	span {
+		color: $accent-color;
+	}
 
-  @media (max-height: 320px) {
-    line-height: 100%;
-    margin-top: 0;
-    font-size: 34px;
-  }
+	@media (max-height: 320px) {
+		line-height: 100%;
+		margin-top: 0;
+		font-size: 34px;
+	}
 }
 
 .fullscreen__text {
-  font-family: "Raleway-Bold", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  @include adaptiv-font(32, 24, 1);
-  line-height: 115%;
-  color: $white;
-  font-feature-settings: "pnum" on, "lnum" on;
-  @include adaptiv-value("margin-bottom", 32, 12, 0);
+	font-family: "Raleway-Bold", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 115%;
+	color: $white;
+	font-feature-settings: "pnum" on, "lnum" on;
+	@include adaptiv-font(32, 24, 1);
 
-  // width: > 1920px
-  @media (min-width: 1920px) {
-    @include adaptiv-value("margin-bottom", 32, 12, 1);
-  }
+	// width: < 1920px
+	@include adaptiv-value("margin-bottom", 32, 12, 0);
+
+	// width: > 1920px
+	@media (min-width: 1920px) {
+		@include adaptiv-value("margin-bottom", 32, 12, 1);
+	}
 }
 
 .fullscreen__link {
-  font-family: "Raleway-Bold", sans-serif;
-  font-size: 16px;
-  @include adaptiv-value("width", 270, 200, 0);
-
-  // width: > 1920px
-  @media (min-width: 1920px) {
-    @include adaptiv-value("width", 270, 200, 1);
-  }
-
-  @include adaptiv-value("height", 60, 50, 0);
-
-  // width: > 1920px
-  @media (min-width: 1920px) {
-    @include adaptiv-value("height", 60, 50, 1);
-  }
-
-  background-color: $accent-color;
-  border-radius: 3px;
-  display: inline-flex;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 10%;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-
-  &:before {
-    content: "";
-    background: url("../img/icons/kp-icon.svg");
-    width: 24px;
-    height: 24px;
-    margin-right: 6px;
-  }
-
-  &:hover {
-    background: darken($accent-color, 4%);
-    transition: all ease 0.3s;
-  }
+	@extend %button-solid;
+	@extend %button-icon;
 }
 
 .fullscreen__image {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1;
 
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: url(../img/icons/substrate.png) repeat
-      transparentize($black, 0.5);
-  }
+	@extend %pattern-bg;
 }
