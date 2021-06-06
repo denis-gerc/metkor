@@ -3574,58 +3574,6 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   opacity: 1;
 }
 
-.page__partners {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.partners {
-  background-color: #f9a34f;
-}
-
-.partners__headline {
-  margin-bottom: 60px;
-}
-
-.partners__slider-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 110px;
-  width: 100%;
-  min-width: 0;
-  background-color: white;
-}
-
-.partners__slider-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.more {
-  position: relative;
-}
-
-.more__item_next {
-  cursor: pointer;
-  left: 10px;
-}
-
-.more__item_prev {
-  cursor: pointer;
-  right: 10px;
-}
-
 .header {
   position: relative;
   top: 0;
@@ -3752,6 +3700,74 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 
 .menu__icon {
   display: none;
+}
+
+.page__partners {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.partners {
+  background-color: #f9a34f;
+}
+
+.partners__headline {
+  margin-bottom: 60px;
+}
+
+.partners__slider-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 110px;
+  width: 100%;
+  min-width: 0;
+  background-color: white;
+}
+
+.partners__slider-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.more {
+  position: relative;
+}
+
+.more__item_next {
+  cursor: pointer;
+  left: 10px;
+}
+
+.more__item_prev {
+  cursor: pointer;
+  right: 10px;
+}
+
+.footer__content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #1b232a;
+}
+
+.content-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 100px;
+  grid-template-rows: 100px;
+  grid-column-gap: 30px;
 }
 
 .page {
