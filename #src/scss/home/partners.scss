@@ -1,0 +1,48 @@
+.page__partners {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.partners {
+	background-color: $accent-color;
+
+	&__headline {
+		margin-bottom: 60px;
+	}
+
+	&__slider {
+		// padding-bottom: 30px;
+	}
+
+	&__slider-image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 110px;
+		width: 100%;
+		min-width: 0;
+		background-color: white;
+		@extend %graystyle;
+
+		&:hover {
+			@extend %graystyleoff;
+		}
+	}
+
+	&__slider-nav {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.more {
+	position: relative;
+	&__item_next {
+		cursor: pointer;
+		left: 10px;
+	}
+
+	&__item_prev {
+		cursor: pointer;
+		right: 10px;
+	}
+}

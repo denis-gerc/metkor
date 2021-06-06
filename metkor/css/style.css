@@ -1294,6 +1294,23 @@ body.ie ._ibg img {
   display: block;
 }
 
+.partners__slider-image {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
+
+.partners__slider-image:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -o-filter: grayscale(0);
+}
+
 #map {
   background: url("../img/icons/loading.gif") center/50px no-repeat;
 }
@@ -3555,6 +3572,58 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 .objects .objects-slider__pagging .swiper-pagination-bullet-active {
   background-color: #f9a34f;
   opacity: 1;
+}
+
+.page__partners {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.partners {
+  background-color: #f9a34f;
+}
+
+.partners__headline {
+  margin-bottom: 60px;
+}
+
+.partners__slider-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 110px;
+  width: 100%;
+  min-width: 0;
+  background-color: white;
+}
+
+.partners__slider-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.more {
+  position: relative;
+}
+
+.more__item_next {
+  cursor: pointer;
+  left: 10px;
+}
+
+.more__item_prev {
+  cursor: pointer;
+  right: 10px;
 }
 
 .header {
