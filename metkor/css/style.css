@@ -2957,7 +2957,11 @@ p.gallery__subtitle {
 }
 
 .portfolio-slider__title p + p {
+  font-family: "Raleway-Regular", sans-serif;
   color: #f9a34f;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 14px;
 }
 
 .portfolio-slider__buttons {
@@ -3401,6 +3405,158 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   border-bottom: 1px dashed #f9a34f;
 }
 
+.page__objects {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.objects {
+  background-color: #222c35;
+}
+
+.objects__h2-title {
+  margin-bottom: 15px;
+}
+
+.objects__subtitle {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+
+.objects__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.objects .objects-slider {
+  margin-bottom: 25px;
+}
+
+.objects .objects-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.objects .objects-slider__content {
+  height: 100%;
+}
+
+.objects .objects-slider__image {
+  padding: 0 0 100% 0;
+}
+
+.objects .objects-slider__title {
+  background-color: #1b232a;
+  padding: 20px;
+  z-index: 2;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.objects .objects-slider__title p:first-child {
+  font-family: "Raleway-Regular", sans-serif;
+  color: #f9a34f;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 14px;
+}
+
+.objects .objects-slider__title p + p {
+  font-family: "Raleway-Light", sans-serif;
+  font-size: 14px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-top: 15px;
+  border-top: 1px solid #222c35;
+}
+
+.objects .objects-slider__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.objects .objects-slider__button-prev {
+  position: absolute;
+  background: url(../img/icons/p-left.svg) right/50% no-repeat;
+  width: 30px;
+  height: 30px;
+  left: -5%;
+}
+
+.objects .objects-slider__button-prev:hover {
+  cursor: pointer;
+}
+
+.objects .objects-slider__button-next {
+  position: absolute;
+  background: url(../img/icons/p-left.svg) right/50% no-repeat;
+  width: 30px;
+  height: 30px;
+  right: -5%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.objects .objects-slider__button-next:hover {
+  cursor: pointer;
+}
+
+.objects .objects-slider__pagging {
+  position: absolute;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  width: 100%;
+  display: none;
+}
+
+.objects .objects-slider__pagging .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
+  opacity: 0.2;
+}
+
+.objects .objects-slider__pagging .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 10px;
+}
+
+.objects .objects-slider__pagging .swiper-pagination-bullet-active {
+  background-color: #f9a34f;
+  opacity: 1;
+}
+
 .header {
   position: relative;
   top: 0;
@@ -3628,6 +3784,10 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   text-align: center;
 }
 
+.subtitle span {
+  color: #f9a34f;
+}
+
 .tab-text {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 16px;
@@ -3764,6 +3924,20 @@ button {
     -webkit-transform: translateX(50px) rotate(180deg);
         -ms-transform: translateX(50px) rotate(180deg);
             transform: translateX(50px) rotate(180deg);
+  }
+
+  .objects .objects-slider__button-prev {
+    display: none;
+  }
+
+  .objects .objects-slider__button-next {
+    display: none;
+  }
+
+  .objects .objects-slider__pagging {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 }
 

@@ -23,6 +23,9 @@
 }
 
 .portfolio-slider {
+	&__item {
+		// height: 100%;
+	}
 	&__image {
 		padding: 0 0 100% 0;
 	}
@@ -48,7 +51,11 @@
 		}
 
 		p + p {
+			font-family: $fontFamily;
 			color: $accent-color;
+			text-transform: uppercase;
+			letter-spacing: 0.09em;
+			font-size: 14px;
 		}
 	}
 

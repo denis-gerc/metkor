@@ -61,7 +61,7 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) {}
 
-let slider_about = new Swiper('.portfolio-slider', {
+let sliderObjectsMetro = new Swiper('.portfolio-slider', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -89,6 +89,68 @@ let slider_about = new Swiper('.portfolio-slider', {
 	navigation: {
 		nextEl: '.portfolio-slider__button-next',
 		prevEl: '.portfolio-slider__button-prev',
+	},
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+		},
+		560: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		870: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		// 1268: {
+		// 	slidesPerView: 3,
+		// 	spaceBetween: 30,
+		// },
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	}
+	// And if we need scrollbar
+	//scrollbar: {
+	//	el: '.swiper-scrollbar',
+	//},
+});
+
+
+let sliderObjects = new Swiper('.objects-slider', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 3,
+	spaceBetween: 30,
+	autoHeight: false,
+	speed: 800,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	pagination: {
+		el: '.objects-slider__pagging',
+		clickable: true,
+	},
+	// Arrows
+	navigation: {
+		nextEl: '.objects-slider__button-next',
+		prevEl: '.objects-slider__button-prev',
 	},
 
 	breakpoints: {

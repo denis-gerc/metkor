@@ -209,6 +209,10 @@ body {
 	font-feature-settings: "pnum" on, "lnum" on;
 	color: $primary-text-color;
 	text-align: center;
+
+	span {
+		color: $accent-color;
+	}
 }
 
 .tab-text {

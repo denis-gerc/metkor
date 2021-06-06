@@ -1,0 +1,139 @@
+.page__objects {
+	padding-top: 100px;
+	padding-bottom: 60px;
+}
+
+.objects {
+	background-color: $primary-bg-color;
+
+	&__h2-title {
+		margin-bottom: 15px;
+	}
+
+	&__subtitle {
+		max-width: 500px;
+		margin: 0 auto;
+		margin-bottom: 55px;
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+	}
+
+	.objects-slider {
+		margin-bottom: 25px;
+
+		&__item {
+			display: flex;
+			height: 100%;
+			flex-direction: column;
+		}
+
+		&__content {
+			height: 100%;
+		}
+
+		&__image {
+			padding: 0 0 100% 0;
+		}
+
+		&__title {
+			background-color: $secondary-bg-color;
+			padding: 20px;
+			z-index: 2;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100%;
+
+			p:first-child {
+				font-family: $fontFamily;
+				color: $accent-color;
+				text-transform: uppercase;
+				letter-spacing: 0.09em;
+				font-size: 14px;
+			}
+
+			p + p {
+				font-family: "Raleway-Light", sans-serif;
+				font-size: 14px;
+				align-self: center;
+				padding-top: 15px;
+				border-top: 1px solid #222c35;
+			}
+		}
+
+		// arrows swiper
+		&__buttons {
+			display: flex;
+			align-items: center;
+		}
+
+		&__button-prev {
+			position: absolute;
+			background: url(../img/icons/p-left.svg) right / 50% no-repeat;
+			width: 30px;
+			height: 30px;
+			left: -5%;
+
+			@media (max-width: 1300px) {
+				display: none;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&__button-next {
+			position: absolute;
+			background: url(../img/icons/p-left.svg) right / 50% no-repeat;
+			width: 30px;
+			height: 30px;
+			right: -5%;
+			transform: rotate(180deg);
+
+			@media (max-width: 1300px) {
+				display: none;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		// bullet swiper
+		&__pagging {
+			position: absolute;
+			z-index: 10;
+			display: flex;
+			justify-content: center;
+			bottom: 0;
+			width: 100%;
+			display: none;
+
+			@media (max-width: 1300px) {
+				display: inline-flex;
+			}
+
+			.swiper-pagination-bullet {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: rgb(0, 0, 0);
+				opacity: 0.2;
+
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+
+				&-active {
+					background-color: $accent-color;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
