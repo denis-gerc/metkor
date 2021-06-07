@@ -3760,14 +3760,95 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   background-color: #1b232a;
 }
 
-.content-grid {
+.footer__content-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 100px;
-  grid-template-rows: 100px;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
   grid-column-gap: 30px;
+}
+
+.footer__column-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__column-item:first-child {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__column-item h3 {
+  margin-bottom: 20px;
+}
+
+.footer__logo {
+  margin-bottom: 24px;
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__item::before {
+  content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.list-contact li:first-child::before {
+  background: url("../img/icons/phone-accent.svg");
+}
+
+.list-contact li:nth-child(2)::before {
+  background: url("../img/icons/email-accent.svg");
+}
+
+.list-contact li:nth-child(3)::before {
+  background: url("../img/icons/text-accent.svg");
+}
+
+.list-contact li:last-child::before {
+  background: url("../img/icons/map-accent.svg");
+}
+
+.list-work li:first-child::before {
+  background: url("../img/icons/calendar-accent.svg");
+}
+
+.list-work li:nth-child(2)::before {
+  background: url("../img/icons/text-accent.svg");
+}
+
+.list-work li:last-child::before {
+  background: url("../img/icons/text-accent.svg");
+}
+
+.footer__link {
+  color: #999999;
+}
+
+.footer__link:hover {
+  -webkit-transition: color ease 0.3s;
+  -o-transition: color ease 0.3s;
+  transition: color ease 0.3s;
+  color: #f9a34f;
 }
 
 .page {
@@ -4175,6 +4256,18 @@ button {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 49, 99%;
             flex: 1 0 49, 99%;
+  }
+
+  .footer__content-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 30px;
+  }
+
+  .footer__column-item {
+    text-align: center;
   }
 }
 
