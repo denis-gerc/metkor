@@ -1055,9 +1055,9 @@ textarea.input {
   text-align: center;
 }
 
-label:nth-of-type(6) .your-file,
+.addfile,
 .fullscreen__link,
-label:nth-child(5) .submit-btn {
+.submit-btn {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 16px;
   background-color: #f9a34f;
@@ -1084,27 +1084,27 @@ label:nth-child(5) .submit-btn {
   transition: box-shadow ease 0.3s, background-color ease 0.3s, -webkit-box-shadow ease 0.3s;
 }
 
-label:nth-of-type(6) .your-file:hover,
+.addfile:hover,
 .fullscreen__link:hover,
-label:nth-child(5) .submit-btn:hover {
+.submit-btn:hover {
   background: #f8993b;
   -webkit-box-shadow: 0 0 15px rgba(249, 163, 79, 0.85);
           box-shadow: 0 0 15px rgba(249, 163, 79, 0.85);
   cursor: pointer;
 }
 
-label:nth-of-type(6) .your-file {
+.addfile {
   background-color: transparent;
   border: 3px solid #f9a34f;
 }
 
-label:nth-of-type(6) .your-file:hover {
+.addfile:hover {
   border: 3px solid #f8993b;
 }
 
 .fullscreen__link:before,
-label:nth-child(5) .submit-btn:before,
-label:nth-of-type(6) .your-file:before {
+.submit-btn:before,
+.addfile:before {
   content: "";
   background: url("../img/icons/kp-icon.svg");
   width: 24px;
@@ -3104,13 +3104,13 @@ p.gallery__subtitle {
   text-align: center;
 }
 
-.mailform {
-  position: relative;
-}
-
 .page__mailform {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.mailform {
+  position: relative;
 }
 
 .mailform__h2-title {
@@ -3136,7 +3136,7 @@ p.gallery__subtitle {
   z-index: -1;
 }
 
-/* <contact form 7> */
+/*<---------------- contact form 7--------------->*/
 
 .wpcf7-form {
   display: -ms-grid;
@@ -3150,7 +3150,7 @@ p.gallery__subtitle {
   grid-gap: 30px;
 }
 
-label:nth-child(1) {
+span:nth-child(1) {
   -ms-grid-row: 1;
   grid-row: 1;
   -ms-grid-column: 1;
@@ -3158,7 +3158,7 @@ label:nth-child(1) {
   grid-column: 1 / 3;
 }
 
-label:nth-child(2) {
+span:nth-child(2) {
   -ms-grid-row: 1;
   grid-row: 1;
   -ms-grid-column: 3;
@@ -3166,7 +3166,7 @@ label:nth-child(2) {
   grid-column: 3 / 5;
 }
 
-label:nth-child(3) {
+span:nth-child(3) {
   -ms-grid-row: 1;
   grid-row: 1;
   -ms-grid-column: 5;
@@ -3174,14 +3174,14 @@ label:nth-child(3) {
   grid-column: 5 / 7;
 }
 
-label:nth-child(4) {
+span:nth-child(4) {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   grid-column: 1 / -1;
 }
 
-label:nth-child(5) {
+span:nth-child(5) {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
@@ -3193,11 +3193,7 @@ label:nth-child(5) {
       justify-self: end;
 }
 
-label:nth-child(5) .submit-btn:before {
-  background: url("../img/icons/email.svg") no-repeat;
-}
-
-label:nth-child(5) .wpcf7-submit {
+span:nth-child(5) .wpcf7-submit {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 16px;
   color: #ffffff;
@@ -3206,7 +3202,11 @@ label:nth-child(5) .wpcf7-submit {
   letter-spacing: 0.1em;
 }
 
-label:nth-of-type(6) {
+.submit-btn:before {
+  background: url("../img/icons/email.svg") no-repeat;
+}
+
+span:nth-of-type(6) {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
@@ -3218,18 +3218,22 @@ label:nth-of-type(6) {
       justify-self: start;
 }
 
-label:nth-of-type(6) .your-file {
+span:nth-of-type(6) .wpcf7-file {
+  opacity: 0;
+}
+
+.addfile {
   width: 240px;
 }
 
-label:nth-of-type(6) .your-file:before {
+.addfile:before {
   content: "";
   position: absolute;
   background: url("../img/icons/add-file.svg") no-repeat;
   left: calc(50% - 40px);
 }
 
-label:nth-of-type(6) .your-file:after {
+.addfile:after {
   content: "Файл";
   position: absolute;
   top: 50%;
@@ -3237,10 +3241,6 @@ label:nth-of-type(6) .your-file:after {
   -webkit-transform: translate(calc(-50% + 15px), -50%);
       -ms-transform: translate(calc(-50% + 15px), -50%);
           transform: translate(calc(-50% + 15px), -50%);
-}
-
-label:nth-of-type(6) .wpcf7-file {
-  opacity: 0;
 }
 
 .wpcf7-text {
@@ -3495,6 +3495,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 14px;
+  margin-bottom: 15px;
 }
 
 .objects .objects-slider__title p + p {
@@ -3702,7 +3703,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   display: none;
 }
 
-.page__partners {
+.footer__partners {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -3777,7 +3778,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 .footer__logo {
   display: block;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .footer__list {
@@ -3845,6 +3846,14 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   color: #f9a34f;
 }
 
+.footer__copyright p {
+  font-family: "Raleway-Medium", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 28px 0;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -3902,13 +3911,8 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 }
 
 .p-text {
-  font-family: "Raleway-Regular", sans-serif;
-  font-size: 16px;
   line-height: 150%;
   margin-bottom: 15px;
-  color: #999999;
-  -webkit-font-feature-settings: "pnum" on, "lnum" on;
-          font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .p-text:last-child {
@@ -3971,6 +3975,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 .ol-list li {
   position: relative;
   padding: 0 0 15px 0;
+  line-height: 150%;
 }
 
 .ol-list li:before {
@@ -4317,7 +4322,7 @@ button {
     grid-template-rows: repeat(3, 60px) 180px 60px min-content;
   }
 
-  label:nth-child(1) {
+  span:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
@@ -4326,7 +4331,7 @@ button {
     grid-column: 1 / 3;
   }
 
-  label:nth-child(2) {
+  span:nth-child(2) {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
@@ -4335,7 +4340,7 @@ button {
     grid-column: 1 / 3;
   }
 
-  label:nth-child(3) {
+  span:nth-child(3) {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
@@ -4344,7 +4349,7 @@ button {
     grid-column: 1 / 3;
   }
 
-  label:nth-child(4) {
+  span:nth-child(4) {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4 / 5;
@@ -4353,7 +4358,7 @@ button {
     grid-column: 1 / 3;
   }
 
-  label:nth-child(5) {
+  span:nth-child(5) {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5 / 6;
@@ -4362,7 +4367,7 @@ button {
     grid-column: 1 / 2;
   }
 
-  label:nth-of-type(6) {
+  span:nth-of-type(6) {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5 / 6;
@@ -4386,7 +4391,7 @@ button {
 }
 
 @media (max-width: 560px) {
-  label:nth-child(5) {
+  span:nth-child(5) {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5 / 6;
@@ -4396,11 +4401,11 @@ button {
     width: 100%;
   }
 
-  label:nth-child(5) .submit-btn {
+  .submit-btn {
     width: 100%;
   }
 
-  label:nth-of-type(6) {
+  span:nth-of-type(6) {
     -ms-grid-row: 6;
     -ms-grid-row-span: 1;
     grid-row: 6 / 7;
@@ -4410,7 +4415,7 @@ button {
     width: 100%;
   }
 
-  label:nth-of-type(6) .your-file {
+  .addfile {
     width: 100%;
   }
 

@@ -55,6 +55,7 @@ body {
 	color: $primary-text-color;
 	font-size: 16px;
 	font-feature-settings: "pnum" on, "lnum" on;
+
 	&._lock {
 		overflow: hidden;
 	}
@@ -173,12 +174,8 @@ body {
 }
 
 .p-text {
-	font-family: $fontFamily;
-	font-size: 16px;
 	line-height: 150%;
 	margin-bottom: 15px;
-	color: $primary-text-color;
-	font-feature-settings: "pnum" on, "lnum" on;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -240,6 +237,7 @@ body {
 	li {
 		position: relative;
 		padding: 0 0 15px 0;
+		line-height: 150%;
 	}
 	li:before {
 		content: counter(num) ".";
