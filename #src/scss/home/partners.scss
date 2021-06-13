@@ -4,6 +4,7 @@
 }
 .partners {
 	background-color: $accent-color;
+	background: url("../img/patterns/rectangle.png") repeat $accent-color;
 
 	&__headline {
 		margin-bottom: 60px;

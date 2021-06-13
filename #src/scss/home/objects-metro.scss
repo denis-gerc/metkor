@@ -1,20 +1,45 @@
-.objects-metro {
-	background-color: $mako-bg-color;
-}
-
 .page__objects-metro {
 	padding-top: 100px;
 	padding-bottom: 60px;
 }
 
+.objects-metro {
+	position: relative;
+
+	&__background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			// background: url("../img/patterns/rrdiagonal-line.png") repeat rgba(0, 0, 0, 0.45);
+			background: url("../img/patterns/substrate.png") repeat rgba(0, 0, 0, 0.45);
+			z-index: 1;
+		}
+	}
+}
+
 .objects-metro__h2-title {
+	position: relative;
 	margin-bottom: 15px;
+	z-index: 2;
 }
 
 .objects-metro__subtitle {
 	max-width: 500px;
 	margin: 0 auto;
 	margin-bottom: 55px;
+	position: relative;
+	z-index: 2;
 }
 
 .portfolio-container {
@@ -36,7 +61,8 @@
 		justify-content: center;
 		align-items: center;
 		width: calc(100% - 40px);
-		background-color: $mako-bg-color;
+		// background-color: $mako-bg-color;
+		background-color: $secondary-bg-color;
 		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 		transform: translateY(-50%);
 		padding: 20px;
@@ -45,7 +71,7 @@
 
 		p:first-child {
 			font-family: "Raleway-Light", sans-serif;
-			font-size: 14px;
+			font-size: 15px;
 			margin-bottom: 0;
 			color: $white;
 		}
