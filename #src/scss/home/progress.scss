@@ -1,55 +1,55 @@
-.progress {
-	background-color: $primary-bg-color;
-}
-
 .page__progress {
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
 
-.progress__container {
-	display: grid;
-	grid-template: 1fr / repeat(4, 1fr);
-	justify-items: center;
-	grid-gap: 30px;
+.progress {
+	background-color: $primary-bg-color;
 
-	@media (max-width: 1024px) {
-		grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+	&__container {
+		display: grid;
+		grid-template: 1fr / repeat(4, 1fr);
+		justify-items: center;
+		grid-gap: 30px;
+
+		@media (max-width: 1024px) {
+			grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+		}
+
+		@media (max-width: 570px) {
+			grid-template: repeat(4, 1fr) / 1fr;
+		}
 	}
 
-	@media (max-width: 570px) {
-		grid-template: repeat(4, 1fr) / 1fr;
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		width: 240px;
+		height: 240px;
+		border-radius: 50%;
+		border: 5px solid $accent-color;
+		position: relative;
+
+		@media (max-width: 1024px) {
+			flex: 1 0 49, 99%;
+		}
+
+		p {
+			padding: 20px;
+		}
 	}
-}
 
-.progress__item {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	width: 240px;
-	height: 240px;
-	border-radius: 50%;
-	border: 5px solid $accent-color;
-	position: relative;
-
-	@media (max-width: 1024px) {
-		flex: 1 0 49, 99%;
+	&__title {
+		font-family: "Raleway-Light", sans-serif;
+		font-size: 64px;
+		line-height: 78 * 100% / 64;
+		color: $white;
+		font-feature-settings: "pnum" on, "lnum" on;
 	}
 
-	.p-text {
-		padding: 20px;
+	&__description {
+		text-align: center;
 	}
-}
-
-.progress__title {
-	font-family: "Raleway-Light", sans-serif;
-	font-size: 64px;
-	line-height: 78 * 100% / 64;
-	color: $white;
-	font-feature-settings: "pnum" on, "lnum" on;
-}
-
-.progress__description {
-	text-align: center;
 }

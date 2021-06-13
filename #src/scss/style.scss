@@ -59,6 +59,15 @@ body {
 	&._lock {
 		overflow: hidden;
 	}
+
+	p {
+		line-height: 150%;
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .visually-hidden {
@@ -171,15 +180,6 @@ body {
 	line-height: 140%;
 	color: $white;
 	font-feature-settings: "pnum" on, "lnum" on;
-}
-
-.p-text {
-	line-height: 150%;
-	margin-bottom: 15px;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 
 .placeholder {
