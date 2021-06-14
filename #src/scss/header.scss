@@ -1,11 +1,9 @@
 .header {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: transparentize($bunker-bg-color, 0.5);
-	z-index: 10;
 }
 
-@import "home/menu-home";
+.header__menu {
+}
+
+@import "home/menu";
+// @import "home/menu-home";
 // @import "home/menu-page";

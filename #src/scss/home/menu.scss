@@ -1,0 +1,257 @@
+.menu {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparentize($bunker-bg-color, 0.5);
+	z-index: 10;
+	box-shadow: 0 3px 0px $accent-color;
+}
+
+.menu__body {
+	display: grid;
+	grid-template-columns: 1fr 100px 1fr;
+	grid-template-rows: 80px;
+	align-items: center;
+	justify-items: center;
+	position: relative;
+	grid-column-gap: 30px;
+	height: 80px;
+
+	&._active {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: $bunker-bg-color;
+		top: 0;
+		z-index: -1;
+		overflow: auto;
+
+		// line color accent
+		&:before {
+			content: "";
+			position: absolute;
+			top: 77px;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			box-shadow: 0 3px 0 $accent-color;
+			z-index: 10;
+		}
+
+		.menu__contact {
+			grid-row: 1 / 2;
+		}
+	}
+
+	nav {
+		justify-self: end;
+	}
+
+	nav + a + nav {
+		justify-self: start;
+	}
+
+	// mobile menu grid
+	@media (max-width: 1110px) {
+		grid-template-rows: 80px repeat(2, 1fr);
+
+		&._active .menu__nav {
+			left: 0;
+		}
+
+		// select first class .menu__nav
+		.menu__nav {
+			position: relative;
+			left: -100%;
+			width: 100%;
+			transition: left 0.3s ease 0s;
+			z-index: 1;
+
+			&:first-child {
+				grid-row: 2 / 3;
+				grid-column: 1 / -1;
+				align-self: end;
+				padding-top: 30px;
+			}
+		}
+
+		// select second class .menu__nav
+		nav + a + nav {
+			grid-row: 3 / 4;
+			grid-column: 1 / -1;
+			justify-self: center;
+			align-self: start;
+		}
+
+		.menu__list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.menu__item {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.menu__list {
+	display: flex;
+}
+
+.menu__item {
+	&:not(:last-child) {
+		margin-right: 20px;
+	}
+}
+
+.menu__link {
+	font-family: "Raleway-Medium", sans-serif;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 114%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: white;
+	font-feature-settings: "pnum" on, "lnum" on;
+
+	@media (min-width: 1110px) {
+		&:hover {
+			transition: all ease 0.3s;
+			color: $accent-color;
+		}
+	}
+}
+
+.header__logo {
+	justify-self: center;
+	@media (max-width: 1110px) {
+		grid-column: 2;
+	}
+}
+
+.logo {
+}
+
+.logo__img {
+}
+
+.menu__contact {
+	position: absolute;
+	right: 0;
+	height: 100%;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: $accent-color;
+
+	@media (max-width: 530px) {
+		display: none;
+	}
+}
+
+.contact__list {
+	padding: 0 15px 0 15px;
+}
+
+.contact__item {
+	line-height: 150%;
+}
+
+.phone-item {
+	display: flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		background: url(../img/icons/phone.svg) no-repeat;
+		width: 24px;
+		height: 24px;
+		margin-right: 4px;
+	}
+}
+
+.contact__link {
+	color: $bunker-bg-color;
+	font-family: "Raleway-Medium", sans-serif;
+}
+
+.phone-link {
+}
+
+.call-item {
+	display: flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		background: url(../img/icons/face-agent.svg) no-repeat;
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+	}
+}
+
+._popup-link {
+}
+
+.menu__icon {
+}
+
+//<!-------------Burger------------->
+@media (max-width: 1110px) {
+	.menu__icon {
+		z-index: 5;
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		grid-row: 1;
+		justify-self: start;
+	}
+
+	.menu__icon span,
+	.menu__icon::before,
+	.menu__icon::after {
+		right: 0;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+		background-color: white;
+	}
+	.menu__icon::before,
+	.menu__icon::after {
+		content: "";
+	}
+	.menu__icon::before {
+		top: 0;
+	}
+	.menu__icon::after {
+		bottom: 0;
+	}
+	.menu__icon span {
+		top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+
+	.menu__icon._active span {
+		transform: scale(0) translate(0px, -50%);
+	}
+	.menu__icon._active::before {
+		top: 50%;
+		transform: rotate(-45deg) translate(0px, -50%);
+	}
+	.menu__icon._active::after {
+		bottom: 50%;
+		transform: rotate(45deg) translate(0px, 50%);
+	}
+}
