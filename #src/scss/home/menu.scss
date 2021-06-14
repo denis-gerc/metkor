@@ -132,12 +132,6 @@
 	}
 }
 
-.logo {
-}
-
-.logo__img {
-}
-
 .menu__contact {
 	position: absolute;
 	right: 0;
@@ -157,6 +151,7 @@
 
 .contact__list {
 	padding: 0 15px 0 15px;
+	font-style: italic;
 }
 
 .contact__item {
@@ -180,6 +175,10 @@
 .contact__link {
 	color: $bunker-bg-color;
 	font-family: "Raleway-Medium", sans-serif;
+	transition: box-shadow ease 0.3s;
+	&:hover {
+		box-shadow: 0 1px 0 $bunker-bg-color;
+	}
 }
 
 .phone-link {
@@ -197,12 +196,6 @@
 		height: 24px;
 		margin-right: 8px;
 	}
-}
-
-._popup-link {
-}
-
-.menu__icon {
 }
 
 //<!-------------Burger------------->

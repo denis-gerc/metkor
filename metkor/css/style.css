@@ -1121,10 +1121,11 @@ textarea.input {
   margin-right: 6px;
 }
 
-._no-webp .fullscreen__image:before{
+._no-webp .fullscreen__image:before, ._no-webp .page__mailform:before{
   background: url("../img/patterns/substrate.png") repeat rgba(0, 0, 0, 0.5); }
 
-.fullscreen__image:before {
+.fullscreen__image:before,
+.page__mailform:before {
   content: "";
   position: absolute;
   left: 0;
@@ -3164,6 +3165,13 @@ p.gallery__subtitle {
   padding-bottom: 100px;
 }
 
+._no-webp .page__mailform:before{
+  background: url("../img/patterns/substrate.png") repeat rgba(0, 0, 0, 0.7); }
+
+.page__mailform:before {
+  z-index: 0;
+}
+
 .mailform {
   position: relative;
 }
@@ -3171,6 +3179,7 @@ p.gallery__subtitle {
 .mailform__h2-title {
   margin-bottom: 15px;
   position: inherit;
+  position: relative;
   z-index: 1;
 }
 
@@ -3178,7 +3187,7 @@ p.gallery__subtitle {
   max-width: 500px;
   margin: 0 auto;
   margin-bottom: 55px;
-  position: inherit;
+  position: relative;
   z-index: 1;
 }
 
@@ -3203,6 +3212,8 @@ p.gallery__subtitle {
   grid-template-rows: 60px 180px 60px -webkit-min-content;
   grid-template-rows: 60px 180px 60px min-content;
   grid-gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 span:nth-child(1) {
@@ -3774,6 +3785,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 
 .contact__list {
   padding: 0 15px 0 15px;
+  font-style: italic;
 }
 
 .contact__item {
@@ -3801,6 +3813,16 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 .contact__link {
   color: #161c22;
   font-family: "Raleway-Medium", sans-serif;
+  -webkit-transition: -webkit-box-shadow ease 0.3s;
+  transition: -webkit-box-shadow ease 0.3s;
+  -o-transition: box-shadow ease 0.3s;
+  transition: box-shadow ease 0.3s;
+  transition: box-shadow ease 0.3s, -webkit-box-shadow ease 0.3s;
+}
+
+.contact__link:hover {
+  -webkit-box-shadow: 0 1px 0 #161c22;
+          box-shadow: 0 1px 0 #161c22;
 }
 
 .call-item {
@@ -4641,7 +4663,7 @@ button {
   }
 }
 
-._webp .fullscreen__image:before{ background: url(../img/patterns/substrate.webp) repeat rgba(0, 0, 0, 0.5); }
+._webp .fullscreen__image:before, ._webp .page__mailform:before{ background: url(../img/patterns/substrate.webp) repeat rgba(0, 0, 0, 0.5); }
 
 ._webp .lg-outer .lg-has-vimeo .lg-video-play{ background: url(../img/vimeo-play.webp) no-repeat scroll 0 0 transparent; }
 
@@ -4654,6 +4676,8 @@ button {
 ._webp .lg-outer .lg-has-youtube:hover .lg-video-play{ background: url(../img/youtube-play.webp) no-repeat scroll 0 -60px transparent; }
 
 ._webp .objects-metro__background:before{ background: url(../img/patterns/substrate.webp) repeat rgba(0, 0, 0, 0.45); }
+
+._webp .page__mailform:before{ background: url(../img/patterns/substrate.webp) repeat rgba(0, 0, 0, 0.7); }
 
 ._webp .objects:before{ background: url(../img/bg/world-map-bg.webp) center/contain no-repeat; }
 
