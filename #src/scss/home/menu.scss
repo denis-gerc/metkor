@@ -8,27 +8,34 @@
 	box-shadow: 0 3px 0px $accent-color;
 
 	&__body {
-		position: relative;
-		&:before {
-			content: "";
+		content: "";
+		overflow: auto;
+		width: 100%;
+		height: 100%;
+
+		&._active {
 			position: fixed;
-			width: 100%;
-			height: 100%;
-			background-color: $bunker-bg-color;
-			top: 0;
-			left: -100%;
-			z-index: -1;
-			overflow: auto;
 		}
+	}
+
+	&__body::before {
+		content: "";
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: -100%;
+		z-index: -1;
+		background-color: $bunker-bg-color;
+		transition: left 0.3s ease 0s;
 	}
 
 	&__body._active::before {
 		left: 0;
-		transition: left 0.3s ease 0s;
 	}
 
 	// line color accent
-	&__body._active::after {
+	&__body::after {
 		content: "";
 		position: absolute;
 		top: 77px;
