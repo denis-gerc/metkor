@@ -39,7 +39,7 @@
 }
 
 /*<---------------- contact form 7--------------->*/
-.wpcf7-form {
+.form-kp {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 60px 180px 60px min-content;
@@ -215,7 +215,7 @@ input[type="tel"],
 textarea[placeholder="Ваше сообщение..."] {
 	font-family: "Raleway-Medium", sans-serif;
 	font-size: 14px;
-	letter-spacing: 2%;
+	letter-spacing: 0.05em;
 	line-height: 125%;
 	text-transform: uppercase;
 	text-decoration: none;

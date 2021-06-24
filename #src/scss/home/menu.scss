@@ -7,26 +7,36 @@
 	z-index: 10;
 	box-shadow: 0 3px 0px $accent-color;
 
-	&__body._active {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		background-color: $bunker-bg-color;
-		top: 0;
-		z-index: -1;
-		overflow: auto;
-
-		// line color accent
+	&__body {
+		position: relative;
 		&:before {
 			content: "";
-			position: absolute;
-			top: 77px;
-			left: 0;
+			position: fixed;
 			width: 100%;
-			height: 3px;
-			box-shadow: 0 3px 0 $accent-color;
-			z-index: 10;
+			height: 100%;
+			background-color: $bunker-bg-color;
+			top: 0;
+			left: -100%;
+			z-index: -1;
+			overflow: auto;
 		}
+	}
+
+	&__body._active::before {
+		left: 0;
+		transition: left 0.3s ease 0s;
+	}
+
+	// line color accent
+	&__body._active::after {
+		content: "";
+		position: absolute;
+		top: 77px;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		box-shadow: 0 3px 0 $accent-color;
+		z-index: 10;
 	}
 
 	&__container {

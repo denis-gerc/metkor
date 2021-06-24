@@ -3,12 +3,28 @@
 	<div class="popup__content">
 		<div class="popup__body">
 			<div class="popup__close"></div>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat veritatis, deserunt corporis, aliquid
-				explicabo itaque perspiciatis quisquam hic consectetur quas architecto dicta assumenda. Esse et ipsa blanditiis.
-				Corporis, qui quae.
-				Ab cum, est quia minima numquam non aut veniam hic impedit minus eaque nemo odit facilis accusamus dolores,
-				atque totam. Sunt earum minus doloribus perferendis pariatur ex repellat alias nemo.
-			</p>
+			<h3 class="h3-title">Заказать звонок</h3>
+			<form method="post" class="wpcf7-form callback-form">
+
+				<!-- name -->
+				<span class="wpcf7-form-control-wrap name">
+					<input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text input-name"
+						aria-invalid="false" placeholder="Ваше имя">
+				</span>
+
+				<!-- phone -->
+				<span class="wpcf7-form-control-wrap tel">
+					<input type="tel" name="tel" value="" size="40"
+						class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input-tel"
+						id="myid" aria-required="true" aria-invalid="false" placeholder="+7 495 445 3039">
+				</span>
+
+				<!-- button send form -->
+				<span class="wpcf7-form-control-wrap submit-btn">
+					<input type="submit" value="Перезвонить" class="wpcf7-form-control wpcf7-submit btn-submit">
+				</span>
+
+			</form>
 		</div>
 	</div>
 </div>

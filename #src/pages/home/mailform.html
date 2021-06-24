@@ -1,7 +1,7 @@
 <section class="mailform page__mailform">
 
 	<div class="mailform__bg _ibg">
-		<img src="img/bg/form-bg-01.jpg" alt="">
+		<img class="rellax" data-rellax-percentage="0.5" src="img/bg/form-bg-03.jpg" alt="">
 	</div>
 
 	<div class="mailform__container _container">
@@ -9,7 +9,7 @@
 			Напишите нам, <span>ответим за 1 час</span></h2>
 		<p class="mailform__subtitle subtitle">Записаться на&nbsp;встречу, запросить документы или коммерческое предложение,
 			задать вопросы</p>
-		<form method="post" class="wpcf7-form" enctype="multipart/form-data" novalidate="novalidate">
+		<form method="post" class="wpcf7-form form-kp" enctype="multipart/form-data">
 
 			<!-- name -->
 			<span class="wpcf7-form-control-wrap name">
@@ -21,14 +21,14 @@
 			<span class="wpcf7-form-control-wrap email">
 				<input type="email" name="email" value="" size="40"
 					class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-email"
-					id="myid" aria-required="true" aria-invalid="false" placeholder="Ваш E-mail">
+					id="email-id" aria-required="true" aria-invalid="false" placeholder="Ваш E-mail">
 			</span>
 
 			<!-- phone -->
 			<span class="wpcf7-form-control-wrap tel">
 				<input type="tel" name="tel" value="" size="40"
 					class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input-tel"
-					id="myid" aria-required="true" aria-invalid="false" placeholder="+7 495 445 3039">
+					id="phone-id" aria-required="true" aria-invalid="false" placeholder="+7 495 445 3039">
 			</span>
 
 			<!-- message -->

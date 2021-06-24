@@ -24,3 +24,10 @@ window.onscroll = function () {
 		});
 	}
 }
+
+// Rellax parallax==========================
+document.addEventListener('DOMContentLoaded', () => {
+	var rellax = new Rellax('.rellax', {
+		center: true
+	});
+});

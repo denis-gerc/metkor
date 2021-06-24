@@ -4,6 +4,7 @@
 .metkor__grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: -10px;
 
 	@media (max-width: 1025px) {
 		grid-template-columns: 1fr;

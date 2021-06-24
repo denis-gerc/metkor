@@ -11,6 +11,7 @@
 		grid-template: 1fr / repeat(4, 1fr);
 		justify-items: center;
 		grid-gap: 30px;
+		margin-bottom: -10px;
 
 		@media (max-width: 1024px) {
 			grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -29,7 +30,7 @@
 		width: 240px;
 		height: 240px;
 		border-radius: 50%;
-		border: 5px solid $accent-color;
+		border: 7px solid $accent-color;
 		position: relative;
 
 		@media (max-width: 1024px) {
