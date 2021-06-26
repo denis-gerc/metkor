@@ -25,5 +25,4 @@
 	}
 }
 
-<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>"; }
-<% }); %>
+// add style for icons fonts

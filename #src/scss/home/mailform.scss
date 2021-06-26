@@ -1,13 +1,6 @@
 .page__mailform {
 	padding-top: 100px;
 	padding-bottom: 100px;
-
-	@extend %pattern-bg;
-
-	&:before {
-		z-index: 0;
-		background: url("../img/patterns/substrate.png") repeat transparentize($black, 0.3);
-	}
 }
 
 .mailform {
@@ -35,6 +28,7 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
+		@extend %pattern-bg;
 	}
 }
 

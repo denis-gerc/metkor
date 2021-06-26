@@ -120,6 +120,9 @@ body {
 
 // Pages
 @import "home";
+@import "catalog";
+// @import "price";
+// @import "contact";
 
 // Section
 @import "header";
@@ -190,13 +193,14 @@ body {
 	font-feature-settings: "pnum" on, "lnum" on;
 }
 
-.menu-text {
-	font-family: "Raleway-Bold", sans-serif;
+%menu-text {
+	font-family: "Raleway-Medium", sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 1.4px;
 	line-height: 160%;
 	font-feature-settings: "pnum" on, "lnum" on;
+	color: $white;
 }
 
 .subtitle {
@@ -227,6 +231,17 @@ body {
 			display: block;
 		}
 	}
+}
+
+.breadcrumbs li > a {
+	line-height: 1.6;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+.filter-btn {
 }
 
 .ol-list {
