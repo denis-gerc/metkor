@@ -298,7 +298,7 @@ let sliderPartners = new Swiper('.partners__slider', {
 // 	});
 // });
 
-// isotope ==================================
+// Isotope ==================================
 // Инициализация секции с которой работаем
 let grid = new Isotope('.grid', {
 	itemSelector: '.grid-item',

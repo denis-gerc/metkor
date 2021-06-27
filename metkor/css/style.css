@@ -2835,17 +2835,19 @@ p.gallery__subtitle {
           transform: scale(1.1);
 }
 
-.gallery__link::before {
-  content: "";
-  background: url("../img/icons/search.svg") center/42px 42px no-repeat rgba(249, 163, 79, 0.7);
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -webkit-transition: 0.3s ease-out opacity;
-  -o-transition: 0.3s ease-out opacity;
-  transition: 0.3s ease-out opacity;
+.gallery__link:hover::before {
+  opacity: 1;
+  cursor: pointer;
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.gallery__link:hover img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .metkor__grid {
@@ -3758,7 +3760,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 
 .header-blog h1 {
   text-align: center;
-  margin: 0;
+  margin-top: 0;
 }
 
 .breadcrumbs__list {
@@ -3785,6 +3787,11 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   color: #999999;
 }
 
+.page__catalog {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .catalog {
   background-color: #222c35;
 }
@@ -3793,6 +3800,8 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3805,27 +3814,59 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   padding-right: 20px;
 }
 
-.page__catalog {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.catalog__title {
+  font-family: "Raleway-Bold", sans-serif;
+  position: absolute;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0.9);
+  bottom: 0px;
+  left: 0px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(#222c35));
+  background: -o-linear-gradient(right, rgba(0, 0, 0, 0) 0%, #222c35 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #222c35 100%);
+  padding: 15px 0;
+  display: block;
+  width: 70%;
 }
 
-.filter-btn:hover {
-  color: #f9a34f;
+.catalog__title:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  margin-left: 5px;
 }
 
-.filter-active {
-  color: #f9a34f;
-}
-
-.grid {
+.catalog__grid {
   margin: 0 -15px;
+}
+
+.filter-btn.filter-active {
+  color: #f9a34f;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: #f9a34f;
 }
 
 .grid-item {
   width: calc(100% * 1 / 3 - 30px);
   padding: 0 0 20% 0;
   margin: 15px;
+  position: relative;
+}
+
+.grid-item a:hover span {
+  color: #f9a34f;
+}
+
+.grid-item a:hover::before {
+  opacity: 1;
+  cursor: pointer;
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .menu {
@@ -4286,11 +4327,40 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 }
 
 .breadcrumbs li > a {
+  font-family: "Raleway-Bold", sans-serif;
   line-height: 1.6;
   font-size: 14px;
-  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.gallery__link::before,
+.grid-item a:before {
+  content: "";
+  position: absolute;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  z-index: 1;
+}
+
+.grid-item a:before {
+  background: url(../img/icons/link.svg) center/42px 42px no-repeat rgba(22, 28, 34, 0.9);
+}
+
+.gallery__link::before {
+  background: url(../img/icons/search.svg) center/42px 42px no-repeat rgba(22, 28, 34, 0.9);
 }
 
 .ol-list {
@@ -4357,16 +4427,6 @@ button {
     -webkit-transition: border-color 0.25s ease;
     -o-transition: border-color 0.25s ease;
     transition: border-color 0.25s ease;
-  }
-
-  .gallery__link:hover::before {
-    opacity: 1;
-  }
-
-  .gallery__link:hover img {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
   }
 }
 

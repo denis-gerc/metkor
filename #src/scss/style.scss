@@ -234,14 +234,35 @@ body {
 }
 
 .breadcrumbs li > a {
+	font-family: "Raleway-Bold", sans-serif;
 	line-height: 1.6;
 	font-size: 14px;
-	font-weight: 700;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 }
 
-.filter-btn {
+%overlay {
+	content: "";
+	position: absolute;
+	transition: 0.3s;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0.8);
+	z-index: 1;
+}
+
+%link-icon {
+	background: url(../img/icons/link.svg) center/42px 42px no-repeat transparentize($bunker-bg-color, 0.1);
+}
+
+%lupe-icon {
+	background: url(../img/icons/search.svg) center/42px 42px no-repeat transparentize($bunker-bg-color, 0.1);
 }
 
 .ol-list {

@@ -1,8 +1,14 @@
+.page__catalog {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
 .catalog {
 	background-color: $primary-bg-color;
 
 	&__filters {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		background-color: $secondary-bg-color;
 		margin-bottom: 50px;
@@ -13,41 +19,67 @@
 		}
 	}
 
-	&__container {
+	&__title {
+		font-family: "Raleway-Bold", sans-serif;
+		position: absolute;
+		z-index: 100;
+		color: transparentize($white, 0.1);
+		bottom: 0px;
+		left: 0px;
+		background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, transparentize($primary-bg-color, 0) 100%);
+		padding: 15px 0;
+		display: block;
+		width: 70%;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			margin-left: 5px;
+		}
 	}
 
 	&__grid {
+		margin: 0 -15px;
 	}
 }
 
-.page__catalog {
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-
-.filters-button {
-}
-
+// filter isotope
 .filter-btn {
 	@extend %menu-text;
+
+	&.filter-active {
+		color: $accent-color;
+	}
 }
 
-.filter-btn:hover {
+.filter-btn:hover,
+.filter-btn:focus {
 	color: $accent-color;
 }
 
-.filter-active {
-	color: $accent-color;
-}
-
-.grid {
-	margin: 0 -15px;
-}
-
+// grid-item isotope
 .grid-item {
 	width: calc(100% * 1 / 3 - 30px);
 	padding: 0 0 20% 0;
 	margin: 15px;
+	position: relative;
+
+	& a:before {
+		@extend %overlay;
+		@extend %link-icon;
+	}
+
+	& a:hover span {
+		color: $accent-color;
+	}
+
+	& a:hover::before {
+		opacity: 1;
+		cursor: pointer;
+		visibility: visible;
+		transform: scale(1);
+	}
 
 	@media (max-width: 768px) {
 		width: calc(50% - 30px);
