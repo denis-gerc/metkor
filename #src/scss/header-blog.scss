@@ -16,7 +16,7 @@
 	}
 
 	&__container {
-		height: 170px;
+		min-height: 170px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

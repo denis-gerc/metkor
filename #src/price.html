@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Каталог"
+"title":"Прайс"
 })
 
 <body>
 	<div class="wrapper">
 		@@include('_header-blog.html',{
-		"link": "2"
+		"link": "3"
 		})
-		<main class="page-catalog">
-			@@include('pages/catalog/catalog-isotope.html',{})
+		<main class="page-price">
+			@@include('pages/price/price-table.html',{})
+
 		</main>
 		@@include('_footer.html',{})
 	</div>
+
 	@@include('_popup.html',{})
 	@@include('_js.html',{})
 </body>

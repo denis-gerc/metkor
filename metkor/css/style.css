@@ -2725,7 +2725,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-color: #222c35;
 }
 
-.advantages__h2-title {
+.advantages__title {
   margin-bottom: 15px;
   position: relative;
   z-index: 2;
@@ -3405,7 +3405,7 @@ textarea[placeholder="Ваше сообщение..."] {
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
           font-feature-settings: "pnum" on, "lnum" on;
   padding: 15px;
-  caret-color: #ffffff;
+  caret-color: #999999;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 0.15rem;
   -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
@@ -3413,7 +3413,7 @@ textarea[placeholder="Ваше сообщение..."] {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  color: #ffffff;
+  color: #999999;
 }
 
 input[type="text"]:focus,
@@ -3727,66 +3727,6 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   opacity: 1;
 }
 
-.header-blog {
-  position: relative;
-}
-
-.header-blog__bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.header-blog__bg::before {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.header-blog__container {
-  height: 170px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.header-blog h1 {
-  text-align: center;
-  margin-top: 0;
-}
-
-.breadcrumbs__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.breadcrumbs__item a {
-  color: #f9a34f;
-}
-
-.breadcrumbs__item:not(:first-child)::before {
-  content: "/";
-  display: inline-block;
-  margin: 0 10px 0 10px;
-  color: #ffffff;
-}
-
-.breadcrumbs__item:not(:last-child) a {
-  color: #999999;
-}
-
 .page__catalog {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -3867,6 +3807,103 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
+}
+
+.price {
+  background-color: #1b232a;
+}
+
+.page-price__price {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.price__subtitle {
+  margin: 0 auto 70px;
+}
+
+.price__content {
+  margin-bottom: 100px;
+}
+
+.price__content h3 {
+  margin-bottom: 15px;
+}
+
+.price__content span {
+  color: #f9a34f;
+}
+
+.price__list li {
+  line-height: 150%;
+}
+
+.price__list li:not(:last-child) {
+  padding: 0 0 15px 0;
+}
+
+.subtitle {
+  display: block;
+  max-width: 500px;
+}
+
+.price__wrap {
+  border: 3px solid #222c35;
+  border-radius: 30px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.table-price {
+  font-family: "Raleway-Medium", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-price thead {
+  font-family: "Raleway-Bold", sans-serif;
+}
+
+.table-price .price__search input[type="text"] {
+  font-family: "Raleway-Medium", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: none;
+}
+
+.table-price .price__search th {
+  padding: 0;
+}
+
+.table-price .price__search input {
+  width: 100%;
+  border: 3px solid #222c35;
+  background-color: transparent;
+}
+
+.table-price tr:nth-child(even) {
+  background-color: #222c35;
+}
+
+.table-price tr.price__search {
+  background: none;
+}
+
+.table-price th {
+  padding: 0 30px 30px;
+}
+
+.table-price td {
+  position: relative;
+  padding: 5px;
+  line-height: 28px;
+}
+
+.price__table-price {
+  margin: 0 auto;
 }
 
 .menu {
@@ -3965,6 +4002,10 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
           font-feature-settings: "pnum" on, "lnum" on;
 }
 
+.menu__link._active {
+  color: #f9a34f;
+}
+
 .menu__contact {
   position: absolute;
   right: 0;
@@ -4047,6 +4088,66 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   width: 24px;
   height: 24px;
   margin-right: 8px;
+}
+
+.header-blog {
+  position: relative;
+}
+
+.header-blog__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header-blog__bg::before {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header-blog__container {
+  min-height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-blog h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.breadcrumbs__item a {
+  color: #f9a34f;
+}
+
+.breadcrumbs__item:not(:first-child)::before {
+  content: "/";
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  color: #ffffff;
+}
+
+.breadcrumbs__item:not(:last-child) a {
+  color: #999999;
 }
 
 .footer__partners {
@@ -4243,6 +4344,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   text-align: center;
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
           font-feature-settings: "pnum" on, "lnum" on;
+  margin-bottom: 15px;
   font-size: 50px;
   line-height: calc(40px + 30 * ((100vw - 320px) / 1600));
 }
@@ -4711,6 +4813,39 @@ button {
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .table-price thead tr:first-child {
+    display: none;
+  }
+
+  .table-price td {
+    display: block;
+    padding-left: 50%;
+  }
+
+  .table-price td:nth-child(even) {
+    background-color: #222c35;
+    border-radius: 3px;
+  }
+
+  .table-price td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10%;
+    font-family: "Raleway-Bold", sans-serif;
+  }
+
+  .table-price tbody tr:nth-child(even) {
+    background: transparent;
+    border-bottom: 3px solid #222c35;
+    border-top: 3px solid #222c35;
+  }
+
+  .table-price tbody tr:last-child {
+    border-bottom: none;
   }
 }
 

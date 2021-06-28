@@ -6,14 +6,23 @@
 	</div>
 
 	<div class="header-blog__container _container">
-		<h1 class="h1-title">Каталог</h1>
+		<h1 class="h1-title">
+			@@if(link==2){Каталог}
+			@@if(link==3){Прайс}
+			@@if(link==4){Контакты}
+		</h1>
+
 		<div class="header-blog__breadcrumbs breadcrumbs">
 			<ul class="breadcrumbs__list">
 				<li class="breadcrumbs__item">
 					<a class="breadcrumbs__link" href="/">Главная</a>
 				</li>
 				<li class="breadcrumbs__item">
-					<a class="breadcrumbs__link" href="#">Каталог</a>
+					<a class="breadcrumbs__link" href="#">
+						@@if(link==2){Каталог}
+						@@if(link==3){Прайс}
+						@@if(link==4){Контакты}
+					</a>
 				</li>
 			</ul>
 		</div>

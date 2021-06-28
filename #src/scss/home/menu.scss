@@ -85,6 +85,10 @@
 		color: white;
 		font-feature-settings: "pnum" on, "lnum" on;
 
+		&._active {
+			color: $accent-color;
+		}
+
 		@media (min-width: 1110px) {
 			&:hover {
 				transition: all ease 0.3s;

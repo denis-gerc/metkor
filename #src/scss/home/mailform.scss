@@ -215,11 +215,11 @@ textarea[placeholder="Ваше сообщение..."] {
 	text-decoration: none;
 	font-feature-settings: "pnum" on, "lnum" on;
 	padding: 15px;
-	caret-color: $white;
+	caret-color: $primary-text-color;
 	border: 1px solid rgba(255, 255, 255, 0.15);
 	border-radius: 0.15rem;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-	color: $white;
+	color: $primary-text-color;
 
 	// <------------focus input--------------->
 	&:focus {

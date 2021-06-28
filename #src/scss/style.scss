@@ -19,6 +19,7 @@ $fontFamily: "Raleway-Regular", sans-serif;
 $primary-bg-color: #222c35;
 $secondary-bg-color: #1b232a;
 $mako-bg-color: #3e454b;
+$mirage-bg-color: #1b232a;
 $bunker-bg-color: #161c22;
 $accent-color: #f9a34f;
 $primary-text-color: #999999;
@@ -121,11 +122,12 @@ body {
 // Pages
 @import "home";
 @import "catalog";
-// @import "price";
-// @import "contact";
+@import "price";
+@import "contact";
 
 // Section
 @import "header";
+@import "header-blog";
 @import "footer";
 
 //<END INCLUDE>================================================================================
@@ -148,6 +150,7 @@ body {
 	color: $white;
 	text-align: center;
 	font-feature-settings: "pnum" on, "lnum" on;
+	margin-bottom: 15px;
 
 	@include adaptiv-font(50, 36, 1);
 	@include adaptiv-value("line-height", 70, 40, 0);

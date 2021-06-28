@@ -3,3 +3,4 @@
 @@include('libs/swiper.min.js', {})
 @@include('libs/rellax.min.js', {})
 @@include('libs/isotope.pkgd.min.js', {})
+@@include('libs/list.min.js', {})

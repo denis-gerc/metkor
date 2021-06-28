@@ -56,3 +56,15 @@ for (let i = 0; i < filterBtn.length; i++) {
 		});
 	};
 }
+
+// List ======================================
+let options1 = {
+	valueNames: ['type', 'kkm']
+};
+
+let options2 = {
+	valueNames: ['basis', 'type', 'kmt']
+};
+
+let userList1 = new List('constructions', options1);
+let userList2 = new List('basis', options2);

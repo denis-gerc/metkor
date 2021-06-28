@@ -1,0 +1,143 @@
+.price {
+	background-color: $mirage-bg-color;
+}
+.page-price__price {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.price__subtitle {
+	margin: 0 auto 70px;
+}
+
+.price__content {
+	margin-bottom: 100px;
+	h3 {
+		margin-bottom: 15px;
+	}
+	span {
+		color: $accent-color;
+	}
+}
+
+.price__list {
+	li {
+		line-height: 150%;
+
+		&:not(:last-child) {
+			padding: 0 0 15px 0;
+		}
+	}
+}
+
+.subtitle {
+	display: block;
+	max-width: 500px;
+}
+
+.price__wrap {
+	border: 3px solid $primary-bg-color;
+	border-radius: 30px;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+
+.table-price {
+	font-family: "Raleway-Medium", sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+
+	thead {
+		font-family: "Raleway-Bold", sans-serif;
+	}
+
+	.price__search {
+		input[type="text"] {
+			font-family: "Raleway-Medium", sans-serif;
+			font-size: 12px;
+			line-height: 1;
+			text-transform: none;
+		}
+
+		th {
+			padding: 0;
+		}
+
+		input {
+			width: 100%;
+			border: 3px solid $primary-bg-color;
+			background-color: transparent;
+		}
+	}
+
+	tr {
+		&:nth-child(even) {
+			background-color: $primary-bg-color;
+		}
+	}
+
+	tr.price__search {
+		background: none;
+	}
+
+	th {
+		padding: 0 30px 30px;
+	}
+
+	td {
+		position: relative;
+		padding: 5px;
+		line-height: 28px;
+	}
+}
+
+.price__table-price {
+	margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+	.table-price {
+		thead {
+			tr {
+				// border-top: none !important;
+				&:first-child {
+					display: none;
+				}
+			}
+		}
+
+		td {
+			display: block;
+			padding-left: 50%;
+
+			&:nth-child(even) {
+				background-color: $primary-bg-color;
+				border-radius: 3px;
+			}
+
+			&:before {
+				content: attr(data-label);
+				position: absolute;
+				left: 10%;
+				font-family: "Raleway-Bold", sans-serif;
+			}
+		}
+
+		tbody {
+			tr {
+				&:nth-child(even) {
+					background: transparent;
+					border-bottom: 3px solid $primary-bg-color;
+					border-top: 3px solid $primary-bg-color;
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}
