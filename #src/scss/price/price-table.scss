@@ -1,9 +1,16 @@
 .price {
 	background-color: $mirage-bg-color;
 }
+
 .page-price__price {
 	padding-top: 100px;
 	padding-bottom: 100px;
+}
+
+.price__container {
+	span {
+		color: $accent-color;
+	}
 }
 
 .price__subtitle {
@@ -14,9 +21,6 @@
 	margin-bottom: 100px;
 	h3 {
 		margin-bottom: 15px;
-	}
-	span {
-		color: $accent-color;
 	}
 }
 
@@ -102,7 +106,6 @@
 	.table-price {
 		thead {
 			tr {
-				// border-top: none !important;
 				&:first-child {
 					display: none;
 				}

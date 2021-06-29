@@ -170,6 +170,10 @@ body {
 	line-height: 100%;
 	color: $white;
 	font-feature-settings: "pnum" on, "lnum" on;
+
+	span {
+		color: $accent-color;
+	}
 }
 
 .h4-title {

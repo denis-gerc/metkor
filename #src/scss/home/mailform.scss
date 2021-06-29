@@ -31,7 +31,23 @@
 		@extend %pattern-bg;
 	}
 }
+.full-screen {
+	@extend %pattern-bg;
 
+	&:before {
+		background: url("../img/patterns/substrate.png") repeat transparentize($black, 0.4);
+	}
+
+	video {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		object-fit: cover;
+	}
+}
 /*<---------------- contact form 7--------------->*/
 .form-kp {
 	display: grid;
@@ -182,7 +198,7 @@ span:nth-of-type(6) {
 .wpcf7-text {
 	width: 100%;
 	height: 100%;
-	background-color: $primary-bg-color;
+	background-color: $bunker-bg-color;
 }
 
 .wpcf7-validates-as-required {
@@ -200,7 +216,7 @@ span:nth-of-type(6) {
 .wpcf7-textarea {
 	width: 100%;
 	height: 100%;
-	background-color: $primary-bg-color;
+	background-color: $bunker-bg-color;
 }
 
 input[type="text"],
@@ -216,14 +232,13 @@ textarea[placeholder="Ваше сообщение..."] {
 	font-feature-settings: "pnum" on, "lnum" on;
 	padding: 15px;
 	caret-color: $primary-text-color;
-	border: 1px solid rgba(255, 255, 255, 0.15);
 	border-radius: 0.15rem;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 	color: $primary-text-color;
 
 	// <------------focus input--------------->
 	&:focus {
-		border: 1px solid transparentize($white, 0.4);
+		border: 1px solid transparentize($primary-text-color, 0.5);
 	}
 
 	&:focus::-webkit-input-placeholder {

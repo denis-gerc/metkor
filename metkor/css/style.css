@@ -1121,12 +1121,13 @@ textarea.input {
   margin-right: 6px;
 }
 
-._no-webp .fullscreen__image:before, ._no-webp .objects-metro__background:before, ._no-webp .mailform__bg:before, ._no-webp .header-blog__bg:before{
+._no-webp .fullscreen__image:before, ._no-webp .objects-metro__background:before, ._no-webp .mailform__bg:before, ._no-webp .full-screen:before, ._no-webp .header-blog__bg:before{
   background: url("../img/patterns/substrate.png") repeat rgba(0, 0, 0, 0.5); }
 
 .fullscreen__image:before,
 .objects-metro__background:before,
 .mailform__bg:before,
+.full-screen:before,
 .header-blog__bg:before {
   content: "";
   position: absolute;
@@ -3256,6 +3257,20 @@ p.gallery__subtitle {
   z-index: -1;
 }
 
+._no-webp .full-screen:before{
+  background: url("../img/patterns/substrate.png") repeat rgba(0, 0, 0, 0.6); }
+
+.full-screen video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*<---------------- contact form 7--------------->*/
 
 .form-kp {
@@ -3368,7 +3383,7 @@ span:nth-of-type(6) .wpcf7-file {
 .wpcf7-text {
   width: 100%;
   height: 100%;
-  background-color: #222c35;
+  background-color: #161c22;
 }
 
 .wpcf7-validates-as-required {
@@ -3389,7 +3404,7 @@ span:nth-of-type(6) .wpcf7-file {
 .wpcf7-textarea {
   width: 100%;
   height: 100%;
-  background-color: #222c35;
+  background-color: #161c22;
 }
 
 input[type="text"],
@@ -3406,7 +3421,6 @@ textarea[placeholder="Ваше сообщение..."] {
           font-feature-settings: "pnum" on, "lnum" on;
   padding: 15px;
   caret-color: #999999;
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 0.15rem;
   -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
@@ -3420,7 +3434,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea[placeholder="Ваше сообщение..."]:focus {
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(153, 153, 153, 0.5);
 }
 
 input[type="text"]:focus::-webkit-input-placeholder,
@@ -3818,6 +3832,10 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   padding-bottom: 100px;
 }
 
+.price__container span {
+  color: #f9a34f;
+}
+
 .price__subtitle {
   margin: 0 auto 70px;
 }
@@ -3828,10 +3846,6 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 
 .price__content h3 {
   margin-bottom: 15px;
-}
-
-.price__content span {
-  color: #f9a34f;
 }
 
 .price__list li {
@@ -3904,6 +3918,121 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 
 .price__table-price {
   margin: 0 auto;
+}
+
+.page-contact {
+  background-color: #222c35;
+  padding-top: 100px;
+}
+
+.page-contact__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 8fr 4fr;
+  grid-template-columns: 8fr 4fr;
+  grid-column-gap: 30px;
+  padding-bottom: 100px;
+}
+
+.page-contact__bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 0 34.7% 0;
+}
+
+.page-contact__title {
+  margin-bottom: 15px;
+}
+
+.page-contact__subtitle {
+  max-width: 400px;
+}
+
+.sidebar__title {
+  margin-bottom: 15px;
+}
+
+.sidebar__list {
+  margin-bottom: 30px;
+}
+
+.list-contact,
+.list-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.list-contact__item,
+.list-work__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  padding: 0 0 15px 0;
+  line-height: 150%;
+}
+
+.list-contact__item::before,
+.list-work__item::before {
+  content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.list-contact__link,
+.list-work__link {
+  color: #999999;
+}
+
+.list-contact__link:hover,
+.list-work__link:hover {
+  -webkit-transition: color ease 0.3s;
+  -o-transition: color ease 0.3s;
+  transition: color ease 0.3s;
+  color: #f9a34f;
+}
+
+.list-contact li:first-child::before,
+.list-work li:first-child::before {
+  background: url("../img/icons/phone-accent.svg");
+}
+
+.list-contact li:nth-child(2)::before,
+.list-work li:nth-child(2)::before {
+  background: url("../img/icons/email-accent.svg");
+}
+
+.list-contact li:nth-child(3)::before,
+.list-work li:nth-child(3)::before {
+  background: url("../img/icons/text-accent.svg");
+}
+
+.list-contact li:last-child::before,
+.list-work li:last-child::before {
+  background: url("../img/icons/map-accent.svg");
+}
+
+.list-work li:first-child::before {
+  background: url("../img/icons/calendar-accent.svg");
+}
+
+.list-work li:nth-child(2)::before {
+  background: url("../img/icons/text-accent.svg");
+}
+
+.list-work li:last-child::before {
+  background: url("../img/icons/text-accent.svg");
 }
 
 .menu {
@@ -4362,6 +4491,10 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
           font-feature-settings: "pnum" on, "lnum" on;
 }
 
+.h3-title span {
+  color: #f9a34f;
+}
+
 .h4-title {
   font-family: "Raleway-ExtraLight", sans-serif;
   font-size: 20px;
@@ -4763,6 +4896,16 @@ button {
             flex: 1 0 49, 99%;
   }
 
+  .list-contact__item,
+  .list-work__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .footer__content-grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -5041,7 +5184,7 @@ button {
   }
 }
 
-._webp .fullscreen__image:before, ._webp .objects-metro__background:before, ._webp .mailform__bg:before, ._webp .header-blog__bg:before{ background: url(../img/patterns/substrate.webp) repeat rgba(0, 0, 0, 0.5); }
+._webp .fullscreen__image:before, ._webp .objects-metro__background:before, ._webp .mailform__bg:before, ._webp .full-screen:before, ._webp .header-blog__bg:before{ background: url(../img/patterns/substrate.webp) repeat rgba(0, 0, 0, 0.5); }
 
 ._webp .lg-outer .lg-has-vimeo .lg-video-play{ background: url(../img/vimeo-play.webp) no-repeat scroll 0 0 transparent; }
 
@@ -5052,6 +5195,8 @@ button {
 ._webp .lg-outer .lg-has-youtube .lg-video-play{ background: url(../img/youtube-play.webp) no-repeat scroll 0 0 transparent; }
 
 ._webp .lg-outer .lg-has-youtube:hover .lg-video-play{ background: url(../img/youtube-play.webp) no-repeat scroll 0 -60px transparent; }
+
+._webp .full-screen:before{ background: url(../img/patterns/substrate.webp) repeat rgba(0, 0, 0, 0.6); }
 
 ._webp .objects:before{ background: url(../img/bg/world-map-bg.webp) center/contain no-repeat; }
 
