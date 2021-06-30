@@ -1,2 +1,107 @@
 .contact-form__container {
 }
+
+.form-contact {
+	display: grid;
+	grid-template-rows: repeat(4, minmax(60px, max-content));
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+
+	@media (max-width: 1024px) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 768px) {
+		grid-template-rows: repeat(7, minmax(min-content, max-content));
+		grid-template-columns: 1fr;
+		grid-gap: 30px 0;
+	}
+
+	input,
+	textarea {
+		background-color: $secondary-bg-color;
+	}
+
+	input {
+		min-height: 60px;
+	}
+
+	// button send mail
+	input[type="submit"] {
+		background-color: transparent;
+		color: $white;
+	}
+
+	span.name {
+		grid-row: 1;
+		grid-column: 1 / 2;
+
+		@media (max-width: 768px) {
+			grid-row: 1;
+			grid-column: 1 / -1;
+		}
+	}
+
+	span.email {
+		grid-row: 1;
+		grid-column: 2 / 3;
+
+		@media (max-width: 768px) {
+			grid-row: 2;
+			grid-column: 1 / -1;
+		}
+	}
+
+	span.message {
+		grid-row: 2;
+		grid-column: 1 / -1;
+
+		@media (max-width: 768px) {
+			grid-row: 4;
+			grid-column: 1 / -1;
+		}
+	}
+
+	span.tel {
+		grid-row: 3;
+		grid-column: 1 / 2;
+
+		@media (max-width: 768px) {
+			grid-row: 3;
+			grid-column: 1 / -1;
+		}
+	}
+
+	span.addfile {
+		grid-row: 3;
+		grid-column: 2 / 3;
+		width: 100%;
+
+		@media (max-width: 768px) {
+			grid-row: 5;
+			grid-column: 1 / -1;
+		}
+	}
+
+	span.submit-btn {
+		grid-row: 4;
+		grid-column: 1 / 2;
+		width: 100%;
+
+		@media (max-width: 768px) {
+			grid-row: 6;
+			grid-column: 1 / -1;
+		}
+	}
+
+	.privacy-policy {
+		grid-row: 4;
+		grid-column: 2 / 3;
+		align-self: center;
+
+		@media (max-width: 768px) {
+			grid-row: 7;
+			grid-column: 1 / -1;
+		}
+	}
+}

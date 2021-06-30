@@ -10,41 +10,42 @@
 		"link":"4"
 		})
 		<div class="page-contact">
-
 			<div class="page-contact__row _container">
-
 				<section class="page-contact__content">
 					<h2 class="page-contact__title h3-title">
 						Контактная <span>Форма</span></h2>
 					<p class="page-contact__subtitle">Записаться на&nbsp;встречу, запросить документы или коммерческое
 						предложение, задать вопросы</p>
-					<!-- @@include('pages/contact/contact-form.html',{}) -->
+					@@include('pages/contact/contact-form.html',{})
 				</section>
-
+				<!-- sidebar -->
 				<aside class="page-contact__sidebar sidebar">
-					<h3 class="sidebar__title h3-title">Контакты <span>Компании</span></h3>
-					<p class="sidebar__subtitle">Приглашаем к нам на экскурсию для долгосрочного сотрудничества
-					</p>
-					<ul class="sidebar__list list-contact">
-						<li class="list-contact__item">
-							<a class="list-contact__link" href="tel:+74954453039">7 495 445 30 39</a>
-						</li>
-						<li class="list-contact__item">
-							<a class="list-contact__link" href="mailto:ooo.metkor@ya.ru">ooo.metkor@ya.ru</a>
-						</li>
-						<li class="list-contact__item">МО, Чеховский р-н, Угодья у&nbsp;леса</li>
-					</ul>
-
-					<h3 class="sidebar__title h3-title">Режим <span>Работы</span></h3>
-
-					<ul class="sidebar__list list-work">
-						<li class="list-work__item">Пн-Пт с 8.00 - 20.00</li>
-						<li class="list-work__item"><a class="list-work__link" href="#">Политика конфиденциальности</a></li>
-						<li class="list-work__item"><a class="list-work__link" href="#">Публичная оферта</a></li>
-					</ul>
-
+					<div class="page-contact__item">
+						<h3 class="sidebar__title h3-title">Контакты <span>Компании</span></h3>
+						<p class="sidebar__subtitle">Приглашаем к нам на экскурсию для долгосрочного сотрудничества
+						</p>
+						<ul class="sidebar__list list-contact">
+							<li class="list-contact__item">
+								<a class="list-contact__link" href="tel:+74954453039">7 495 445 30 39</a>
+							</li>
+							<li class="list-contact__item">
+								<a class="list-contact__link" href="mailto:ooo.metkor@ya.ru">ooo.metkor@ya.ru</a>
+							</li>
+							<li class="list-contact__item">МО, Чеховский р-н, Угодья у&nbsp;леса</li>
+						</ul>
+					</div>
+					<div class="page-contact__item">
+						<h3 class="sidebar__title h3-title">Режим <span>Работы</span></h3>
+						<ul class="sidebar__list list-work">
+							<li class="list-work__item">Пн-Пт с 8.00 - 20.00</li>
+							<li class="list-work__item"><a class="list-work__link" href="#">Политика конфиденциальности</a></li>
+							<li class="list-work__item"><a class="list-work__link" href="#">Публичная оферта</a></li>
+						</ul>
+					</div>
+					<div class="qrcode _ibg">
+						<img src="img/whatsapp.svg" alt="">
+					</div>
 				</aside>
-
 			</div>
 			@@include('pages/contact/contact-map.html',{})
 
