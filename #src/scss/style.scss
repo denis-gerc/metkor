@@ -261,12 +261,16 @@ body {
 	text-align: center;
 	opacity: 0;
 	visibility: hidden;
-	transform: scale(0.8);
+	transform: scale(0.6);
 	z-index: 1;
 }
 
 %link-icon {
 	background: url(../img/icons/link.svg) center/42px 42px no-repeat transparentize($bunker-bg-color, 0.1);
+}
+
+%link-icon-accent-small {
+	background: url(../img/icons/link.svg) center/24px 24px no-repeat transparentize($accent-color, 0.1);
 }
 
 %lupe-icon {
@@ -293,6 +297,19 @@ body {
 		width: 20px;
 		color: $accent-color;
 		text-align: right;
+	}
+}
+
+.ul-list {
+	li {
+		line-height: 150%;
+
+		&:not(:last-child) {
+			padding: 0 0 15px 0;
+		}
+		span {
+			color: $accent-color;
+		}
 	}
 }
 

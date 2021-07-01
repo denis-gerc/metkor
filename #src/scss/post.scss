@@ -7,26 +7,160 @@
 		// grid page
 		display: grid;
 		grid-template-columns: 4fr 8fr;
-		grid-column-gap: 60px;
+		grid-column-gap: 30px;
 
-		@media (max-width: 1024px) {
+		@media (max-width: 1025px) {
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(2, max-content);
 		}
 	}
 
 	// grid content section
-	&__content {
+	&__article {
 		grid-column: 2;
 		grid-row: 1 / -1;
+
+		@media (max-width: 1025px) {
+			grid-column: 1 /-1;
+			grid-row: 1 / 2;
+			margin-bottom: 60px;
+		}
 	}
 
 	// grid sidebar section
 	&__sidebar {
 		grid-column: 1;
 		grid-row: 1 / -1;
+
+		@media (max-width: 1025px) {
+			grid-column: 1 /-1;
+			grid-row: 2 / 3;
+
+			// grid category
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 30px;
+		}
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
 	}
 }
 
 .post-sidebar {
+	// padding: 0 15px;
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+		@media (max-width: 1025px) {
+			&:not(:last-child) {
+				margin-bottom: 0px;
+			}
+		}
+		@media (max-width: 768px) {
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		text-transform: capitalize;
+
+		&.h3-title {
+			font-family: "Raleway-SemiBold", sans-serif;
+			font-size: 20px;
+			line-height: 1.4;
+		}
+	}
+
+	&__list {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__post-item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.category-item {
+	display: flex;
+	align-items: center;
+	padding-right: 20px;
+
+	&__img {
+		margin-right: 20px;
+		position: relative;
+		height: 100%;
+		left: 0;
+		top: 0;
+
+		&:before {
+			@extend %overlay;
+			@extend %link-icon-accent-small;
+		}
+
+		&:hover::before {
+			opacity: 1;
+			cursor: pointer;
+			visibility: visible;
+			transform: scale(1);
+		}
+
+		img {
+		}
+	}
+
+	&__title {
+	}
+
+	&__link {
+		font-family: "Raleway-SemiBold", sans-serif;
+		font-size: 16px;
+		line-height: 1.4;
+		color: $white;
+
+		&:hover {
+			color: $accent-color;
+			transition: color 0.3s ease 0s;
+		}
+	}
+}
+
+.article {
+	background-color: $secondary-bg-color;
+	&__img {
+		position: relative;
+		width: 100%;
+		padding: 0 0 64% 0;
+		left: 0;
+		top: 0;
+	}
+
+	&__content {
+		@include adaptiv-value("padding", 40, 15, 1);
+	}
+
+	&__title {
+		@include adaptiv-font(30, 26, 1);
+		&:first-child {
+			margin-bottom: 20px;
+		}
+
+		&.h3-title {
+			line-height: 1.4;
+			text-align-last: left;
+		}
+		&.h4-title {
+			text-align: left;
+			margin-bottom: 15px;
+		}
+	}
 }
