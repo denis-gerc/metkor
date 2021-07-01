@@ -1,0 +1,32 @@
+.page-post {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: $primary-bg-color;
+
+	&__row {
+		// grid page
+		display: grid;
+		grid-template-columns: 4fr 8fr;
+		grid-column-gap: 60px;
+
+		@media (max-width: 1024px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, max-content);
+		}
+	}
+
+	// grid content section
+	&__content {
+		grid-column: 2;
+		grid-row: 1 / -1;
+	}
+
+	// grid sidebar section
+	&__sidebar {
+		grid-column: 1;
+		grid-row: 1 / -1;
+	}
+}
+
+.post-sidebar {
+}

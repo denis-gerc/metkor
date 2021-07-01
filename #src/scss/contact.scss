@@ -51,17 +51,17 @@
 	&__sidebar {
 		@media (max-width: 1024px) {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr 150px;
 			grid-column-gap: 30px;
 		}
 
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
-			grid-template-rows: repeat(2, max-content);
+			grid-template-rows: repeat(3, minmax(150px, max-content));
 		}
 
 		&__item {
-			text-align-last: left;
+			text-align: left;
 		}
 	}
 
@@ -85,7 +85,7 @@
 		}
 	}
 
-	&__item:not(:last-child) {
+	.sidebar__item:not(:last-child) {
 		margin-bottom: 30px;
 	}
 
@@ -166,4 +166,8 @@
 	height: 150px;
 	left: 0;
 	top: 0;
+
+	@media (max-width: 768px) {
+		margin: 0 auto;
+	}
 }

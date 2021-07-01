@@ -3950,8 +3950,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
 }
 
 .page-contact__sidebar__item {
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align: left;
 }
 
 .page-contact .form-contact {
@@ -4042,7 +4041,7 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   margin-bottom: 15px;
 }
 
-.page-contact__item:not(:last-child) {
+.page-contact .sidebar__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -4132,6 +4131,32 @@ textarea[placeholder="Ваше сообщение..."]:focus:-ms-input-placehold
   height: 150px;
   left: 0;
   top: 0;
+}
+
+.page-post {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #222c35;
+}
+
+.page-post__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 8fr;
+  grid-template-columns: 4fr 8fr;
+  grid-column-gap: 60px;
+}
+
+.page-post__content {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  grid-row: 1 / -1;
+}
+
+.page-post__sidebar {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  grid-row: 1 / -1;
 }
 
 .menu {
@@ -5007,8 +5032,8 @@ button {
   .page-contact__sidebar {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 150px;
+    grid-template-columns: 1fr 1fr 150px;
     grid-column-gap: 30px;
   }
 
@@ -5024,6 +5049,15 @@ button {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+
+  .page-post__row {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: (-webkit-max-content)[2];
+    -ms-grid-rows: (max-content)[2];
+    grid-template-rows: repeat(2, -webkit-max-content);
+    grid-template-rows: repeat(2, max-content);
   }
 
   .footer__content-grid {
@@ -5198,10 +5232,10 @@ button {
   .page-contact__sidebar {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: (-webkit-max-content)[2];
-    -ms-grid-rows: (max-content)[2];
-    grid-template-rows: repeat(2, -webkit-max-content);
-    grid-template-rows: repeat(2, max-content);
+    -ms-grid-rows: (minmax(150px, -webkit-max-content))[3];
+    -ms-grid-rows: (minmax(150px, max-content))[3];
+    grid-template-rows: repeat(3, minmax(150px, -webkit-max-content));
+    grid-template-rows: repeat(3, minmax(150px, max-content));
   }
 
   .page-contact .form-contact {
@@ -5269,6 +5303,10 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .qrcode {
+    margin: 0 auto;
   }
 }
 
